@@ -2,10 +2,11 @@
     "compilerOptions": {
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
+      "moduleResolution": "node",
       "declaration": true,
       "baseUrl": "./src",
       "rootDir": "./src",
-      "outDir": "dist",
+      "outDir": "build/main",
       "allowJs": false,
       "esModuleInterop": true,
       "target": "es6",
