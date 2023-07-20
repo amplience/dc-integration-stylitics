@@ -45,12 +45,23 @@ function flattenCommon(result: any): void {
     }
 }
 
+/**
+ * Register content type schemas that map to given Stylitics Widget types, or the generic type.
+ * Replaces existing mappings.
+ * @param schemaPairs Pairs of schema ID and widget type to register
+ */
 export function registerSchemaMappings(schemaPairs: [string, ArgumentContentType][]) {
     for (const pair of schemaPairs) {
         typeMapping.set(pair[0], pair[1]);
     }
 }
 
+/**
+ * Convert from a generic widget content item into an object usable by the Stylitics widget,
+ * as well as an account and view type string which can be used to select different types of widget.
+ * @param body The content item body containing the widget arguments
+ * @returns Stylitics Widget arguments
+ */
 export function fromGeneric(body: GenericWidgetContentItem<string>) : WidgetInitArgs {
     const result = {...body} as any;
 
@@ -61,6 +72,13 @@ export function fromGeneric(body: GenericWidgetContentItem<string>) : WidgetInit
     return result;
 }
 
+/**
+ * Convert from a specific widget content item into an object usable by the Stylitics widget,
+ * as well as an account and view type string which can be used to select different types of widget.
+ * @param body The content item body containing the widget arguments
+ * @param type The identified type of the specific widget
+ * @returns Stylitics Widget arguments
+ */
 export function fromSpecific(body: SpecificWidgetContentItem<string>, type: GenericWidgetType) : WidgetInitArgs {
     const keys = Object.keys(body);
     const result = {...body} as any;
@@ -86,8 +104,8 @@ function toArgumentContentType(body: ContentItem): ArgumentContentType {
 /**
  * Convert a content item containing stylitics widget arguments into an object usable by the Stylitics widget,
  * as well as an account and view type string which can be used to select different types of widget.
- * @param body Content item body
- * @returns Stylitics widget arguments
+ * @param body The content item body containing the widget arguments
+ * @returns Stylitics Widget arguments
  */
 export function fromContentItem(body: GenericWidgetContentItem<string> | SpecificWidgetContentItem<string>) : WidgetInitArgs {
     const type = toArgumentContentType(body);
