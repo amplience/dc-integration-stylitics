@@ -1,0 +1,221 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://demostore.amplience.com/content/stylitics/hotspots",
+	"title": "Stylitics Classic",
+	"description": "Content type for a stylitics hotspots widget as per https://web-assets.stylitics.com/demo-site/latest/Classic-Default.html",
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	"type": "object",
+	"properties": {
+		"help": {
+			"type": "null",
+			"ui:extension": {
+				"name": "help",
+				"params": {
+					"title": "Stylitics Hotspots",
+					"message": "### Example SKUs\n#### demo-womens account\n|SKU label|SKU ID|\n|----|----|\n|PUMA x VOGUE Women's Sweatpants|536693_22|\n|Willa blazer in city crepe|BP416_BK0001|\n|Willa blazer in city crepe|BP416_NA6095|\n|Millie slingback heels with metallic mesh|BQ292_EE3794|\n|Demi-fine 14k gold-plated layered necklace|BN463_EC7253|\n|Edie Italian leather bag|BP508_NA6445|\n|Maisie ankle-strap heels in Italian suede|BP331_EE3843|"
+				}
+			}
+		},
+        "header": {
+            "title": "Header",
+            "allOf": [
+                {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
+                }
+            ]
+        },
+        "account": {
+            "title": "Account",
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/account"
+                }
+            ]
+        },
+		"sku": {
+			"title": "SKU",
+			"description": "The sku of the product to render",
+			"type": "string",
+            "ui:extension": {
+                "name": "ecomm-toolkit",
+                "params": {
+                    "label": "Search By Category",
+                    "view": "product",
+                    "data": "product",
+                    "type": "string"
+                }
+            }
+		},
+		"api": {
+            "title": "API Properties",
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/api"
+                }
+            ]
+        },
+		"display": {
+            "title": "Display Properties",
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/display"
+                }
+            ]
+        },
+        "display_extra": {
+            "title": "Display Extra Properties",
+            "type": "object",
+            "properties": {
+                "hideAnchorItem": {
+                    "title": "Hide Anchor Item",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hideAnchorItem"
+                        }
+                    ]
+                },
+                "clickableImageMnM": {
+                    "title": "Enable Collage Image Swapping (with MnM)",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableImageMnM"
+                        }
+                    ]
+                },
+
+                "bundleCounter": {
+                    "title": "Bundle Counter Visibility (with MnM)",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounter"
+                        }
+                    ]
+                },
+                "clickableModalDots": {
+                    "title": "Advancement Progress Indicator (with MnM)",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableModalDots"
+                        }
+                    ]
+                },
+
+                "bundleProductList": {
+                    "title": "Product List Display (without MnM)",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleProductList"
+                        }
+                    ]
+                },
+
+                "clickableCarouselDots": {
+                    "title": "Advancement Progress Indicator (dots)",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselDots"
+                        }
+                    ]
+                },
+
+                "clickableCarouselAdvancementRate": {
+                    "title": "Carousel Advancement Rate",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselAdvancementRate"
+                        }
+                    ]
+                },
+                
+                "clickableCarouselNextItemPeek": {
+                    "title": "Next Bundle Peek",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselNextItemPeek"
+                        }
+                    ]
+                },
+
+                "clickableCarouselPreviousItemPeek": {
+                    "title": "Previous Bundle Peek",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselPreviousItemPeek"
+                        }
+                    ]
+                },
+                "hotspotsAppearOnLoad": {
+                    "title": "Show Over Modals on Load",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspotsAppearOnLoad"
+                        }
+                    ]
+                },
+
+                "hotspotsOverlayOrder": {
+                    "title": "Hotspots Overlay Order - Input",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspotsOverlayOrder"
+                        }
+                    ]
+                },
+
+                "individualHotspots": {
+                    "title": "Individual Hotspots",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/individualHotspots"
+                        }
+                    ]
+                }
+            }
+        },
+        "text": {
+            "title": "Text Properties",
+            "type": "object",
+            "properties": {
+                "viewDetailsCTA": {
+                    "title": "View Details Default Text",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/viewDetailsCTA"
+                        }
+                    ]
+                },
+
+                "itemLinkCTA": {
+                    "title": "SHOP Default Text",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemLinkCTA"
+                        }
+                    ]
+                },
+
+                "itemDetailsModalHeader": {
+                    "title": "Details Modal Default Text",
+                    "allOf": [
+                        {
+                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemDetailsModalHeader"
+                        }
+                    ]
+                }
+            }
+        },
+		"price": {
+            "title": "Price Properties",
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/price"
+                }
+            ]
+        }
+	},
+	"propertyOrder": []
+}

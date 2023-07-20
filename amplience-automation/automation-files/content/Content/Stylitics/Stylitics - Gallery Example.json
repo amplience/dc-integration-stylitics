@@ -1,0 +1,60 @@
+{
+  "id": "ebc3d626-ecac-4158-8ad8-3dd59409fbfa",
+  "body": {
+    "_meta": {
+      "name": "Stylitics - Gallery Example",
+      "schema": "https://demostore.amplience.com/content/stylitics/gallery"
+    },
+    "header": {
+      "values": [
+        {
+          "locale": "en-US",
+          "value": "Mens Top Picks Gallery"
+        }
+      ],
+      "_meta": {
+        "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+      }
+    },
+    "api": {
+      "min": 3,
+      "max": 6
+    },
+    "api_extra": {
+      "tags": "mens_stylistspicks_gallery"
+    },
+    "display": {
+      "imglazyLoadNextScreen": true,
+      "disableMnM": true,
+      "swipeableCarouselDots": false
+    },
+    "display_extra": {
+      "hideAnchorItem": false,
+      "clickableImageMnM": false,
+      "bundleCounter": true,
+      "clickableModalDots": false,
+      "bundleProductList": "product-list-on-hover",
+      "swipeableCarouselLeftPadding": 0,
+      "swipeableCarouselArrows": false,
+      "mobileGalleryLayout": false
+    },
+    "navigation": {
+      "clickItemLinkDesktop": "new-tab",
+      "clickItemLinkMobile": "same-tab"
+    },
+    "price": {
+      "hideDoubleZeroCents": false
+    },
+    "account": "demo-womens"
+  },
+  "version": 10,
+  "label": "Stylitics - Gallery Example",
+  "status": "ACTIVE",
+  "createdBy": "ff2c9bf5-61c0-4c01-966b-4443918c74a8",
+  "createdDate": "2023-07-10T14:14:50.318Z",
+  "lastModifiedBy": "ff2c9bf5-61c0-4c01-966b-4443918c74a8",
+  "lastModifiedDate": "2023-07-12T12:06:51.230Z",
+  "lastPublishedVersion": 10,
+  "lastPublishedDate": "2023-07-12T12:06:56.429Z",
+  "deliveryId": "ebc3d626-ecac-4158-8ad8-3dd59409fbfa"
+}
