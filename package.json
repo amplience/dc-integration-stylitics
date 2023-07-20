@@ -7,7 +7,7 @@
   "main": "build/main/index.js",
   "module": "build/module/index.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf build && rimraf dist",
     "lint": "eslint",
     "build": "run-s clean && run-s build-ts && run-s build-dist",
     "build-ts": "eslint && run-p build-ts:*",
