@@ -116,25 +116,6 @@ export const importHandler = async (context: Arguments<Context>): Promise<any> =
         console.warn(`Missing SFCC configuration, product selector extension will not be usable.`)
     }
 
-    // Computing all Editions start and end dates
-    // Starting from the next Monday, one week per Edition
-    const now = new Date()
-    now.setHours(0,1,0,0)
-    const nextMonday = new Date(now)
-    nextMonday.setDate(now.getDate() + (((8 - now.getDay()) % 7)))
-    const editions = [...new Array(4)].map((_,i) => {
-        let editionStartDate = new Date(nextMonday)
-        editionStartDate.setDate(nextMonday.getDate() + 7*i)
-        let editionEndDate = new Date(nextMonday)
-        editionEndDate.setDate(nextMonday.getDate() + 6+7*i)
-        editionEndDate.setHours(23,59,59,0) 
-        return {
-            editionStartDate: editionStartDate.toISOString(),
-            editionEndDate: editionEndDate.toISOString()
-        }
-    })
-    context.editions = editions
-
     // Getting visualisation name and url from Amplience default config
     context.visualisations = amplience.visualisations
 
@@ -158,85 +139,35 @@ export const importHandler = async (context: Arguments<Context>): Promise<any> =
             {stdio: 'inherit'}
         )
 
-        // console.log(`Importing settings...`)
-        // execSync(
-        //     `npx dc-cli settings import ${context.tempDir}/settings/hub-settings.json \
-        //         --allowDelete true \
-        //         --mapFile ${mappingFile}`, 
-        //     {stdio: 'inherit'}
-        // )
+        console.log(`Importing extensions...`)
+        execSync(
+            `npx dc-cli extension import ${context.tempDir}/extensions`, 
+            {stdio: 'inherit'}
+        )
 
-        // console.log(`Importing extensions...`)
-        // execSync(
-        //     `npx dc-cli extension import ${context.tempDir}/extensions`, 
-        //     {stdio: 'inherit'}
-        // )
+        console.log(`Importing content type schemas...`)
+        execSync(
+            `npx dc-cli content-type-schema import ${context.tempDir}/schema`, 
+            {stdio: 'inherit'}
+        )
 
-        // console.log(`Importing content type schemas...`)
-        // execSync(
-        //     `npx dc-cli content-type-schema import ${context.tempDir}/schema`, 
-        //     {stdio: 'inherit'}
-        // )
+        console.log(`Importing content types...`)
+        execSync(
+            `npx dc-cli content-type import ${context.tempDir}/type \
+                --sync`,
+            {stdio: 'inherit'}
+        )
 
-        // console.log(`Importing content types...`)
-        // execSync(
-        //     `npx dc-cli content-type import ${context.tempDir}/type \
-        //         --sync`,
-        //     {stdio: 'inherit'}
-        // )
-
-        // console.log(`Importing content...`)
-        // execSync(
-        //     `npx dc-cli content-item import ${context.tempDir}/content/content \
-        //         --baseRepo ${context.contentRepoId} \
-        //         --media true \
-        //         --publish \
-        //         --batchPublish \
-        //         --mapFile ${mappingFile}`,
-        //     {stdio: 'inherit'}
-        // )
-
-        // console.log(`Importing slots...`)
-        // execSync(
-        //     `npx dc-cli content-item import ${context.tempDir}/content/slots \
-        //         --baseRepo ${context.slotsRepoId} \
-        //         --publish \
-        //         --batchPublish \
-        //         --mapFile ${mappingFile}`, 
-        //     {stdio: 'inherit'}
-        // )
-
-        // console.log(`Importing site components...`)
-        // execSync(
-        //     `npx dc-cli content-item import \
-        //         ${context.tempDir}/content/sitestructure \
-        //         --baseRepo ${context.sitestructureRepoId} \
-        //         --media true \
-        //         --publish \
-        //         --batchPublish \
-        //         --mapFile ${mappingFile}`, 
-        //     {stdio: 'inherit'}
-        // )
-
-        // console.log(`Importing events...`)
-        // execSync(
-        //     `npx dc-cli event import ${context.tempDir}/events \
-        //         --acceptSnapshotLimits true \
-        //         --schedule true \
-        //         --catchup true \
-        //         --mapFile ${mappingFile}`,
-        //     {stdio: 'inherit'}
-        // )
-
-        // console.log(`Re-importing slots...`)
-        // execSync(
-        //     `npx dc-cli content-item import ${context.tempDir}/content/slots \
-        //         --baseRepo ${context.slotsRepoId} \
-        //         --publish \
-        //         --batchPublish \
-        //         --mapFile ${mappingFile}`, 
-        //     {stdio: 'inherit'}
-        // )
+        console.log(`Importing content...`)
+        execSync(
+            `npx dc-cli content-item import ${context.tempDir}/content/content \
+                --baseRepo ${context.contentRepoId} \
+                --media true \
+                --publish \
+                --batchPublish \
+                --mapFile ${mappingFile}`,
+            {stdio: 'inherit'}
+        )
 
         console.log(`Done!`)
     } finally {
