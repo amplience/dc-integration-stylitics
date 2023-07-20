@@ -1,7 +1,8 @@
 import { ContentItem } from "./ContentItem";
-import { ClassicWidgetDisplay, CommonWidgetProps, GalleryWidgetApi, GalleryWidgetDisplay, HotspotWidgetDisplay, MainAndDetailDisplay, MoodboardWidgetDisplay, WidgetCustomizedNavigation, WidgetHotspotOverlayOrderContent, WidgetTextExtras, WidgetTextMoodboardExtras } from "./WidgetTypes";
+import { ClassicWidgetDisplay, CommonWidgetProps, GalleryWidgetApi, GalleryWidgetDisplay, HotspotWidgetDisplay, MainAndDetailDisplay, MoodboardWidgetDisplay, WidgetCustomizedNavigation, WidgetHotspotOverlayOrderContent, WidgetTextExtras, WidgetTextMoodboardExtras } from "./WidgetArgumentTypes";
 
 export interface SpecificWidgetContentItemFragment extends ContentItem, CommonWidgetProps {
+    account: string,
     sku: string
 }
 

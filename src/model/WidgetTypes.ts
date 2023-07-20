@@ -1,148 +1,66 @@
-export type WidgetLinkType = 'new-tab' | 'same-tab';
-export type WidgetRoundingStyle = 'none' | 'floor' | 'ceiling' | 'round';
-export type WidgetPriceStyle = 'strikethrough' | 'sales-price-only';
-export type WidgetBundleListType = 'slideout-on-click' | 'product-list-on-click' | 'product-list-on-hover';
-export type WidgetLabelStyle = '1' | '2' | '3' | '4' | '5';
-export type WidgetMoodboardImageType = 'editorial' | 'non-editorial';
-export type WidgetAspectRatio = 'square';
+import { WidgetArgs } from "./WidgetArgumentTypes";
 
-export interface WidgetApiSection {
-    min?: number;
-    max?: number;
+export type StyliticsAction = 'click' | 'view' | 'swap' | 'mount';
+export type StyliticsSubject = 'bundle' | 'bundles' | 'item' | 'replacement' | 'replacements';
+
+/**
+ * Interface for a generic Stylitics Widget instance.
+ */
+export interface StyliticsWidget {
+    /**
+     * Remove the widget completely from the page, should you need to.
+     */
+    destroy: () => void,
+
+    /**
+     * IMPORTANT: Clients should consult with their account managers before toggling these tracking functions, as it may impact analytics results.
+     */
+    doNotTrack: () => void,
+
+    /**
+     * Add a callback to be called for an event type, likely for customization or metrics purposes.
+     * @param action Choose one
+     * @param subject Choose one
+     * @param method Callback function that will be called with relevant arguments when the event occurs
+     */
+    on: (action: StyliticsAction, subject: StyliticsSubject, method: Function) => void,
+
+    /**
+     * Override the default behavior for an event type. For instance, use this to open a "quickview" on click.
+     * @param action Only click behaviors can be overriden for now
+     * @param subject Choose one
+     * @param method Callback function that will be called with relevant arguments when the event occurs
+     */
+    override: (action: 'click', subject: 'bundle' | 'item', method: Function) => void,
+
+    /**
+     * Reload the widget passing in new params. Often useful if you would like to switch to a new colorway ID.
+     * @param args Updated widget arguments
+     */
+    refresh: (args: WidgetArgs) => void,
+
+    /**
+     * Call after initialization and after any calls to .on or .override Starts the process of fetching outfits from Stylitics in order to populate the widget.
+     */
+    start: () => void,
+
+    /**
+     * Send a tracking event when a user adds an item to the cart.
+     */
+    trackAddItemToCart: (itemId: string) => void,
+
+    /**
+     * Send a tracking event when a user clicks on an item outside of the Stylitics Widget, for instance, in a "quickview".
+     */
+    trackClickItem: (remoteId: string) => void,
+
+    /**
+     * Send a tracking event when a user clicks a jumplink.
+     */
+    trackClickJumpLink: () => void,
+
+    /**
+     * Print information about the widget to the browser console.
+     */
+    info: () => void,
 }
-
-export interface WidgetCustomizedNavigation {
-    clickItemLinkDesktop: WidgetLinkType,
-    clickItemLinkMobile: WidgetLinkType
-}
-
-export interface CommonWidgetProps {
-    account: string,
-    api: WidgetApiSection,
-    display: {
-        imglazyLoadNextScreen: boolean,
-        bundleBackgroundColor: string,
-        disableMnM: true,
-        swipeableCarouselNextItemPeek: number,
-        swipeableCarouselDots: boolean
-    },
-    price: {
-        roundingStyle: WidgetRoundingStyle,
-        hideDoubleZeroCents: boolean,
-        salesPriceStyle: WidgetPriceStyle
-    },
-}
-
-export interface WidgetTextExtras<StringType> {
-    viewDetailsCTA: StringType,
-    itemLinkCTA: StringType,
-    itemDetailsModalHeader: StringType
-}
-
-export interface WidgetTextMoodboardExtras<StringType> {
-    itemLinkCTA: StringType,
-    itemDetailsModalHeader: StringType,
-    bundleCounterLabel: StringType
-}
-
-export interface MainAndDetailDisplay {
-    swipeableCarouselArrows: boolean
-}
-
-export interface MainAndDetailWidgetProps {
-    display: MainAndDetailDisplay
-}
-
-export interface ClassicWidgetDisplay {
-    hideAnchorItem: boolean,
-    clickableImageMnM: boolean,
-    bundleCounter: boolean,
-    clickableModalDots: boolean,
-    bundleProductList: WidgetBundleListType,
-    clickableCarouselDots: boolean,
-    clickableCarouselAdvancementRate: number,
-    clickableCarouselNextItemPeek: number,
-    clickableCarouselPreviousItemPeek: number,
-    clickableCarouselGutterWidth: number,
-    swipeableCarouselGutterWidth: number,
-    swipeableCarouselLeftPadding: number,
-    swipeableCarouselArrows: boolean,
-    labelStyle: WidgetLabelStyle,
-    labelBorderColor: string,
-    dynamicLabelBackground: boolean
-}
-
-export interface ClassicWidgetProps<StringType> {
-    display: ClassicWidgetDisplay,
-    navigation: WidgetCustomizedNavigation,
-    text: WidgetTextExtras<StringType>
-}
-
-export type WidgetHotspotOverlayOrderContent = string[]; // As CSV
-export type WidgetHotspotOverlayOrderArgs = string[][]; // As multi-dimensional array
-
-export interface HotspotWidgetDisplay<OverlayOrderType> {
-    hideAnchorItem: boolean,
-    clickableImageMnM: boolean,
-    bundleCounter: boolean,
-    clickableModalDots: boolean,
-    bundleProductList: WidgetBundleListType,
-    clickableCarouselDots: boolean,
-    clickableCarouselAdvancementRate: number,
-    clickableCarouselNextItemPeek: number,
-    clickableCarouselPreviousItemPeek: number,
-    hotspotsAppearOnLoad: boolean,
-    individualHotspots: boolean,
-    hotspotsOverlayOrder: string[] // More specific?
-}
-
-export interface HotspotWidgetProps<StringType, OverlayOrderType> {
-    display: HotspotWidgetDisplay<OverlayOrderType>,
-    text: WidgetTextExtras<StringType>
-}
-
-export interface MoodboardWidgetDisplay {
-    bundleCounter: boolean,
-    swipeableCarouselLeftPadding: number,
-    swipeableCarouselArrows: boolean,
-    labelStyle: WidgetLabelStyle,
-    labelBorderColor: string,
-    dynamicLabelBackground: boolean,
-    showArrowsMnM: true,
-    moodboardImageType: WidgetMoodboardImageType,
-    coerceMoodboardImageAspectRatio: WidgetAspectRatio,
-    mobileCtaClickOnly: boolean,
-    hideAnchorItemCard: boolean,
-    maxGridSize: number
-}
-
-export interface MoodboardWidgetProps<StringType> {
-    display: MoodboardWidgetDisplay,
-    navigation: WidgetCustomizedNavigation,
-    text: WidgetTextMoodboardExtras<StringType>
-}
-
-export interface GalleryWidgetApi {
-    tags: string
-}
-
-export interface GalleryWidgetDisplay {
-    hideAnchorItem: boolean,
-    clickableImageMnM: boolean,
-    bundleCounter: boolean,
-    clickableModalDots: boolean,
-    bundleProductList: WidgetBundleListType,
-    swipeableCarouselGutterWidth: number,
-    swipeableCarouselLeftPadding: number,
-    swipeableCarouselArrows: boolean,
-    mobileGalleryLayout: boolean
-}
-
-export interface GalleryWidgetProps<StringType> {
-    api: GalleryWidgetApi,
-    display: GalleryWidgetDisplay,
-    navigation: WidgetCustomizedNavigation,
-    text: WidgetTextExtras<StringType>
-}
-
-export type WidgetArgs = CommonWidgetProps & (MainAndDetailWidgetProps | ClassicWidgetProps<string> | HotspotWidgetProps<string, WidgetHotspotOverlayOrderArgs> | MoodboardWidgetProps<string> | GalleryWidgetProps<string>);

@@ -1,9 +1,16 @@
 import { ContentItem } from "./model/ContentItem";
 import { GenericWidgetContentItem, GenericWidgetType } from "./model/GenericWidgetContentItem";
 import { SpecificWidgetContentItem } from "./model/SpecificWidgetContentItem";
-import { WidgetArgs } from "./model/WidgetTypes";
+import { WidgetArgs } from "./model/WidgetArgumentTypes";
 
-type ArgumentContentType = GenericWidgetType | 'generic';
+export type ArgumentContentType = GenericWidgetType | 'generic';
+
+export interface WidgetExtras {
+    view: ArgumentContentType;
+    account: string;
+}
+
+export type WidgetInitArgs = WidgetExtras & WidgetArgs
 
 const typeMapping = new Map<string, ArgumentContentType>([
     ['https://demostore.amplience.com/content/stylitics/generic', 'generic'],
@@ -15,16 +22,18 @@ const typeMapping = new Map<string, ArgumentContentType>([
 ]);
 
 function flattenGenericType(base, type): void {
-    if (type.display) {
-        base.display = {...base.display, ...type.display};
-    }
+    if (type) {
+        if (type.display) {
+            base.display = {...base.display, ...type.display};
+        }
 
-    if (type.navigation) {
-        base.navigation = {...base.navigation, ...type.navigation}
-    }
+        if (type.navigation) {
+            base.navigation = {...base.navigation, ...type.navigation}
+        }
 
-    if (type.text) {
-        base.text = {...base.text, ...type.text}
+        if (type.text) {
+            base.text = {...base.text, ...type.text}
+        }
     }
 }
 
@@ -42,7 +51,7 @@ export function registerSchemaMappings(schemaPairs: [string, ArgumentContentType
     }
 }
 
-export function fromGeneric(body: GenericWidgetContentItem<string>) : WidgetArgs {
+export function fromGeneric(body: GenericWidgetContentItem<string>) : WidgetInitArgs {
     const result = {...body} as any;
 
     flattenGenericType(result, result[result.view]);
@@ -52,7 +61,7 @@ export function fromGeneric(body: GenericWidgetContentItem<string>) : WidgetArgs
     return result;
 }
 
-export function fromSpecific(body: SpecificWidgetContentItem<string>, type: GenericWidgetType) : WidgetArgs {
+export function fromSpecific(body: SpecificWidgetContentItem<string>, type: GenericWidgetType) : WidgetInitArgs {
     const keys = Object.keys(body);
     const result = {...body} as any;
 
@@ -74,7 +83,13 @@ function toArgumentContentType(body: ContentItem): ArgumentContentType {
     return typeMapping.get(body._meta.schema);
 }
 
-export function fromContentItem(body: GenericWidgetContentItem<string> | SpecificWidgetContentItem<string>) : WidgetArgs {
+/**
+ * Convert a content item containing stylitics widget arguments into an object usable by the Stylitics widget,
+ * as well as an account and view type string which can be used to select different types of widget.
+ * @param body Content item body
+ * @returns Stylitics widget arguments
+ */
+export function fromContentItem(body: GenericWidgetContentItem<string> | SpecificWidgetContentItem<string>) : WidgetInitArgs {
     const type = toArgumentContentType(body);
 
     if (type === 'generic') {

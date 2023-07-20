@@ -1,5 +1,5 @@
 import { ContentItem } from "./ContentItem";
-import { ClassicWidgetProps, CommonWidgetProps, GalleryWidgetProps, HotspotWidgetProps, MainAndDetailWidgetProps, MoodboardWidgetProps, WidgetHotspotOverlayOrderContent } from "./WidgetTypes";
+import { ClassicWidgetProps, CommonWidgetProps, GalleryWidgetProps, HotspotWidgetProps, MainAndDetailWidgetProps, MoodboardWidgetProps, WidgetHotspotOverlayOrderContent } from "./WidgetArgumentTypes";
 
 export type GenericWidgetType = 
     'classic' |
