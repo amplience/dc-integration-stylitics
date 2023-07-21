@@ -5,6 +5,7 @@
       "name": "Stylitics - Moodboard Example",
       "schema": "https://demostore.amplience.com/content/stylitics/moodboard"
     },
+    "type": "moodboard",
     "api": {
       "min": 3,
       "max": 6
@@ -14,31 +15,33 @@
       "disableMnM": true,
       "swipeableCarouselDots": false
     },
-    "display_extra": {
-      "bundleCounter": true,
-      "swipeableCarouselLeftPadding": 0,
-      "swipeableCarouselArrows": false,
-      "dynamicLabelBackground": false,
-      "showArrowsMnM": false,
-      "moodboardImageType": "non-editorial",
-      "mobileCtaClickOnly": false,
-      "hideAnchorItemCard": true,
-      "coerceMoodboardImageAspectRatio": "square"
-    },
-    "navigation": {
-      "clickItemLinkDesktop": "new-tab",
-      "clickItemLinkMobile": "same-tab"
-    },
-    "text": {
-      "bundleCounterLabel": {
-        "values": [
-          {
-            "locale": "en-US",
-            "value": "Set"
+    "moodboard": {
+      "display": {
+        "bundleCounter": true,
+        "swipeableCarouselLeftPadding": 0,
+        "swipeableCarouselArrows": false,
+        "dynamicLabelBackground": false,
+        "showArrowsMnM": false,
+        "moodboardImageType": "non-editorial",
+        "mobileCtaClickOnly": false,
+        "hideAnchorItemCard": true,
+        "coerceMoodboardImageAspectRatio": "square"
+      },
+      "navigation": {
+        "clickItemLinkDesktop": "new-tab",
+        "clickItemLinkMobile": "same-tab"
+      },
+      "text": {
+        "bundleCounterLabel": {
+          "values": [
+            {
+              "locale": "en-US",
+              "value": "Set"
+            }
+          ],
+          "_meta": {
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
           }
-        ],
-        "_meta": {
-          "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
         }
       }
     },

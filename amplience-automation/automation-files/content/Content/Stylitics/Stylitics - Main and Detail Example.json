@@ -16,6 +16,7 @@
         "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
       }
     },
+    "type": "mainAndDetail",
     "api": {
       "min": 3,
       "max": 6
@@ -25,8 +26,10 @@
       "disableMnM": true,
       "swipeableCarouselDots": false
     },
-    "display_extra": {
-      "swipeableCarouselArrows": false
+    "mainAndDetail": {
+      "display": {
+        "swipeableCarouselArrows": false
+      }
     },
     "price": {
       "hideDoubleZeroCents": false

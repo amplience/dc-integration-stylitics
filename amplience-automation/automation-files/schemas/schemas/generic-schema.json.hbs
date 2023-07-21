@@ -1,29 +1,29 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/content/stylitics/generic",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://demostore.amplience.com/content/stylitics/generic",
 
-	"title": "Stylitics Generic",
-	"description": "A sample content type that lets the user pick the view type required",
+    "title": "Stylitics Generic",
+    "description": "A sample content type that lets the user pick the view type required",
 
-	"allOf": [
-		{
-			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
-		}
-	],
-	
-	"type": "object",
-	"properties": {
-		"help": {
-			"type": "null",
-			"ui:extension": {
-				"name": "help",
-				"params": {
-					"title": "Stylitics Generic",
-					"message": "### Example SKUs\n#### demo-womens account\n|SKU label|SKU ID|\n|----|----|\n|PUMA x VOGUE Women's Sweatpants|536693_22|\n|Willa blazer in city crepe|BP416_BK0001|\n|Willa blazer in city crepe|BP416_NA6095|\n|Millie slingback heels with metallic mesh|BQ292_EE3794|\n|Demi-fine 14k gold-plated layered necklace|BN463_EC7253|\n|Edie Italian leather bag|BP508_NA6445|\n|Maisie ankle-strap heels in Italian suede|BP331_EE3843|"
-				}
-			}
-		},
-		"header": {
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    
+    "type": "object",
+    "properties": {
+        "help": {
+            "type": "null",
+            "ui:extension": {
+                "name": "help",
+                "params": {
+                    "title": "Stylitics Generic",
+                    "message": "### Example SKUs\n#### demo-womens account\n|SKU label|SKU ID|\n|----|----|\n|PUMA x VOGUE Women's Sweatpants|536693_22|\n|Willa blazer in city crepe|BP416_BK0001|\n|Willa blazer in city crepe|BP416_NA6095|\n|Millie slingback heels with metallic mesh|BQ292_EE3794|\n|Demi-fine 14k gold-plated layered necklace|BN463_EC7253|\n|Edie Italian leather bag|BP508_NA6445|\n|Maisie ankle-strap heels in Italian suede|BP331_EE3843|"
+                }
+            }
+        },
+        "header": {
             "title": "Header",
             "allOf": [
                 {
@@ -31,20 +31,20 @@
                 }
             ]
         },
-		"view": {
-			"title": "View Type",
-			"description": "The rendering style of the Stylitics component",
-			"type": "string",
-			"enum": [
-				"classic",
-				"hotspots",
-				"moodboard",
-				"gallery",
-				"mainAndDetail"
-			],
-			"default": "classic"
-		},
-		"account": {
+        "view": {
+            "title": "View Type",
+            "description": "The rendering style of the Stylitics component",
+            "type": "string",
+            "enum": [
+                "classic",
+                "hotspots",
+                "moodboard",
+                "gallery",
+                "mainAndDetail"
+            ],
+            "default": "classic"
+        },
+        "account": {
             "title": "Account",
             "allOf": [
                 {
@@ -52,10 +52,10 @@
                 }
             ]
         },
-		"sku": {
-			"title": "SKU",
-			"description": "The sku of the product to render",
-			"type": "string",
+        "sku": {
+            "title": "SKU",
+            "description": "The sku of the product to render",
+            "type": "string",
             "ui:extension": {
                 "name": "ecomm-toolkit",
                 "params": {
@@ -65,8 +65,8 @@
                     "type": "string"
                 }
             }
-		},
-		"api": {
+        },
+        "api": {
             "title": "API Properties",
             "allOf": [
                 {
@@ -74,7 +74,7 @@
                 }
             ]
         },
-		"display": {
+        "display": {
             "title": "Display Properties",
             "allOf": [
                 {
@@ -82,7 +82,7 @@
                 }
             ]
         },
-		"price": {
+        "price": {
             "title": "Price Properties",
             "allOf": [
                 {
@@ -90,705 +90,41 @@
                 }
             ]
         },
-		"classic": {
-			"title": "Classic Widget",
-			"type": "object",
-			"properties": {
-				"display": {
-					"title": "Display Properties",
-					"type": "object",
-					"properties": {
-						"hideAnchorItem": {
-							"title": "Hide Anchor Item",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hideAnchorItem"
-								}
-							]
-						},
-						"clickableImageMnM": {
-							"title": "Enable Collage Image Swapping (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableImageMnM"
-								}
-							]
-						},
-						"bundleCounter": {
-							"title": "Bundle Counter Visibility (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounter"
-								}
-							]
-						},
-						"clickableModalDots": {
-							"title": "Advancement Progress Indicator (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableModalDots"
-								}
-							]
-						},
-						"bundleProductList": {
-							"title": "Product List Display (without MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleProductList"
-								}
-							]
-						},
-						"clickableCarouselDots": {
-							"title": "Advancement Progress Indicator (dots)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselDots"
-								}
-							]
-						},
-						"clickableCarouselAdvancementRate": {
-							"title": "Carousel Advancement Rate",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselAdvancementRate"
-								}
-							]
-						},
-						"clickableCarouselNextItemPeek": {
-							"title": "Next Bundle Peek",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselNextItemPeek"
-								}
-							]
-						},
-
-						"clickableCarouselPreviousItemPeek": {
-							"title": "Previous Bundle Peek",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselPreviousItemPeek"
-								}
-							]
-						},
-
-						"clickableCarouselGutterWidth": {
-							"title": "Gutter Width",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselGutterWidth"
-								}
-							]
-						},
-
-						"swipeableCarouselGutterWidth": {
-							"title": "Gutter Width (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselGutterWidth"
-								}
-							]
-						},
-
-						"swipeableCarouselLeftPadding": {
-							"title": "Left Padding (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselLeftPadding"
-								}
-							]
-						},
-
-						"swipeableCarouselArrows": {
-							"title": "Carousel Arrows (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselArrows"
-								}
-							]
-						},
-
-						"labelStyle": {
-							"title": "Label Style",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/labelStyle"
-								}
-							]
-						},
-
-						"labelBorderColor": {
-							"title": "Label Border Color",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/labelBorderColor"
-								}
-							]
-						},
-
-						"dynamicLabelBackground": {
-							"title": "Dynamic Label Background",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/dynamicLabelBackground"
-								}
-							]
-						}
-					}
-				},
-				"navigation": {
-					"title": "Navigation Properties",
-					"type": "object",
-					"properties": {
-						"clickItemLinkDesktop": {
-							"title": "Shop Button Link Behavior (Desktop)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickItemLinkDesktop"
-								}
-							]
-						},
-
-						"clickItemLinkMobile": {
-							"title": "Shop Button Link Behavior (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickItemLinkMobile"
-								}
-							]
-						}
-					}
-				},
-				"text": {
-					"title": "Text Properties",
-					"type": "object",
-					"properties": {
-						"viewDetailsCTA": {
-							"title": "View Details Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/viewDetailsCTA"
-								}
-							]
-						},
-
-						"itemLinkCTA": {
-							"title": "SHOP Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemLinkCTA"
-								}
-							]
-						},
-
-						"itemDetailsModalHeader": {
-							"title": "Details Modal Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemDetailsModalHeader"
-								}
-							]
-						}
-					}
-				}
-			}
-		},
-		"hotspots": {
-			"title": "Hotspots Widget",
-			"type": "object",
-			"properties": {
-				"display": {
-					"title": "Display Properties",
-					"type": "object",
-					"properties": {
-						"hideAnchorItem": {
-							"title": "Hide Anchor Item",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hideAnchorItem"
-								}
-							]
-						},
-						"clickableImageMnM": {
-							"title": "Enable Collage Image Swapping (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableImageMnM"
-								}
-							]
-						},
-
-						"bundleCounter": {
-							"title": "Bundle Counter Visibility (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounter"
-								}
-							]
-						},
-						"clickableModalDots": {
-							"title": "Advancement Progress Indicator (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableModalDots"
-								}
-							]
-						},
-
-						"bundleProductList": {
-							"title": "Product List Display (without MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleProductList"
-								}
-							]
-						},
-
-						"clickableCarouselDots": {
-							"title": "Advancement Progress Indicator (dots)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselDots"
-								}
-							]
-						},
-
-						"clickableCarouselAdvancementRate": {
-							"title": "Carousel Advancement Rate",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselAdvancementRate"
-								}
-							]
-						},
-						
-						"clickableCarouselNextItemPeek": {
-							"title": "Next Bundle Peek",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselNextItemPeek"
-								}
-							]
-						},
-
-						"clickableCarouselPreviousItemPeek": {
-							"title": "Previous Bundle Peek",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselPreviousItemPeek"
-								}
-							]
-						},
-						"hotspotsAppearOnLoad": {
-							"title": "Show Over Modals on Load",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspotsAppearOnLoad"
-								}
-							]
-						},
-
-						"hotspotsOverlayOrder": {
-							"title": "Hotspots Overlay Order - Input",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspotsOverlayOrder"
-								}
-							]
-						},
-
-						"individualHotspots": {
-							"title": "Individual Hotspots",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/individualHotspots"
-								}
-							]
-						}
-					}
-				},
-				"text": {
-					"title": "Text Properties",
-					"type": "object",
-					"properties": {
-						"viewDetailsCTA": {
-							"title": "View Details Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/viewDetailsCTA"
-								}
-							]
-						},
-
-						"itemLinkCTA": {
-							"title": "SHOP Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemLinkCTA"
-								}
-							]
-						},
-
-						"itemDetailsModalHeader": {
-							"title": "Details Modal Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemDetailsModalHeader"
-								}
-							]
-						}
-					}
-				}
-			}
-		},
-		"moodboard": {
-			"title": "Moodboard Widget",
-			"type": "object",
-			"properties": {
-				"display": {
-					"title": "Display Properties",
-					"type": "object",
-					"properties": {
-						"bundleCounter": {
-							"title": "Bundle Counter Visibility (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounter"
-								}
-							]
-						},
-						"swipeableCarouselLeftPadding": {
-							"title": "Left Padding (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselLeftPadding"
-								}
-							]
-						},
-						"swipeableCarouselArrows": {
-							"title": "Carousel Arrows (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselArrows"
-								}
-							]
-						},
-
-						"labelStyle": {
-							"title": "Label Style",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/labelStyle"
-								}
-							]
-						},
-
-						"labelBorderColor": {
-							"title": "Label Border Color",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/labelBorderColor"
-								}
-							]
-						},
-
-						"dynamicLabelBackground": {
-							"title": "Dynamic Label Background",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/dynamicLabelBackground"
-								}
-							]
-						},
-						"showArrowsMnM": {
-							"title": "MnM Design with Arrows",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/showArrowsMnM"
-								}
-							]
-						},
-
-						"moodboardImageType": {
-							"title": "Image Type",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/moodboardImageType"
-								}
-							]
-						},
-
-						"coerceMoodboardImageAspectRatio": {
-							"title": "Image Aspect Ratio",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/coerceMoodboardImageAspectRatio"
-								}
-							]
-						},
-
-						"mobileCtaClickOnly": {
-							"title": "Mobile Product Shelf",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/mobileCtaClickOnly"
-								}
-							]
-						},
-
-						"hideAnchorItemCard": {
-							"title": "Anchor Item Card Visibility",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hideAnchorItemCard"
-								}
-							]
-						},
-
-						"maxGridSize": {
-							"title": "Grid Size",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/maxGridSize"
-								}
-							]
-						}
-					}
-				},
-				"navigation": {
-					"title": "Navigation Properties",
-					"type": "object",
-					"properties": {
-						"clickItemLinkDesktop": {
-							"title": "Shop Button Link Behavior (Desktop)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickItemLinkDesktop"
-								}
-							]
-						},
-
-						"clickItemLinkMobile": {
-							"title": "Shop Button Link Behavior (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickItemLinkMobile"
-								}
-							]
-						}
-					}
-				},
-				"text": {
-					"title": "Text Properties",
-					"type": "object",
-					"properties": {
-						"itemLinkCTA": {
-							"title": "SHOP Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemLinkCTA"
-								}
-							]
-						},
-
-						"itemDetailsModalHeader": {
-							"title": "Details Modal Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemDetailsModalHeader"
-								}
-							]
-						},
-
-						"bundleCounterLabel": {
-							"title": "Bundle Counter Prefix Label",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounterLabel"
-								}
-							]
-						}
-					}
-				}
-			}
-		},
-		"gallery": {
-			"title": "Gallery Widget",
-			"type": "object",
-			"properties": {
-				"api": {
-					"title": "API Properties",
-					"type": "object",
-					"properties": {
-						"tags": {
-							"title": "Tags",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/tags"
-								}
-							]
-						}
-					}
-				},
-				"display": {
-					"title": "Display Properties",
-					"type": "object",
-					"properties": {
-						"hideAnchorItem": {
-							"title": "Hide Anchor Item",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hideAnchorItem"
-								}
-							]
-						},
-						"clickableImageMnM": {
-							"title": "Enable Collage Image Swapping (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableImageMnM"
-								}
-							]
-						},
-
-						"bundleCounter": {
-							"title": "Bundle Counter Visibility (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounter"
-								}
-							]
-						},
-
-						"clickableModalDots": {
-							"title": "Advancement Progress Indicator (with MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableModalDots"
-								}
-							]
-						},
-
-						"bundleProductList": {
-							"title": "Product List Display (without MnM)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleProductList"
-								}
-							]
-						},
-						"swipeableCarouselGutterWidth": {
-							"title": "Gutter Width (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselGutterWidth"
-								}
-							]
-						},
-
-						"swipeableCarouselLeftPadding": {
-							"title": "Left Padding (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselLeftPadding"
-								}
-							]
-						},
-						"swipeableCarouselArrows": {
-							"title": "Carousel Arrows (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselArrows"
-								}
-							]
-						},
-						"mobileGalleryLayout": {
-							"title": "Gallery Layout (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/mobileGalleryLayout"
-								}
-							]
-						}
-					}
-				},
-				"navigation": {
-					"title": "Navigation Properties",
-					"type": "object",
-					"properties": {
-						"clickItemLinkDesktop": {
-							"title": "Shop Button Link Behavior (Desktop)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickItemLinkDesktop"
-								}
-							]
-						},
-
-						"clickItemLinkMobile": {
-							"title": "Shop Button Link Behavior (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickItemLinkMobile"
-								}
-							]
-						}
-					}
-				},
-				"text": {
-					"title": "Text Properties",
-					"type": "object",
-					"properties": {
-						"viewDetailsCTA": {
-							"title": "View Details Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/viewDetailsCTA"
-								}
-							]
-						},
-
-						"itemLinkCTA": {
-							"title": "SHOP Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemLinkCTA"
-								}
-							]
-						},
-
-						"itemDetailsModalHeader": {
-							"title": "Details Modal Default Text",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemDetailsModalHeader"
-								}
-							]
-						}
-					}
-				}
-			}
-		},
-		"mainAndDetail": {
-			"title": "Main and Detail Widget",
-			"type": "object",
-			"properties": {
-				"display": {
-					"title": "Display Properties",
-					"type": "object",
-					"properties": {
-						"swipeableCarouselArrows": {
-							"title": "Carousel Arrows (Mobile)",
-							"allOf": [
-								{
-									"$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselArrows"
-								}
-							]
-						}
-					}
-				}
-			}
-		}
-	},
-	"propertyOrder": []
+        "classic": {
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/classic"
+                }
+            ]
+        },
+        "hotspots": {
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspots"
+                }
+            ]
+        },
+        "moodboard": {
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/moodboard"
+                }
+            ]
+        },
+        "gallery": {
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/gallery"
+                }
+            ]
+        },
+        "mainAndDetail": {
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/mainAndDetail"
+                }
+            ]
+        }
+    },
+    "propertyOrder": []
 }

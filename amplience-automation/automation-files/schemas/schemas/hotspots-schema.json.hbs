@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "https://demostore.amplience.com/content/stylitics/hotspots",
-	"title": "Stylitics Classic",
+	"title": "Stylitics Hotspots",
 	"description": "Content type for a stylitics hotspots widget as per https://web-assets.stylitics.com/demo-site/latest/Classic-Default.html",
 	"allOf": [
 		{
@@ -27,6 +27,10 @@
                     "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
                 }
             ]
+        },
+        "view": {
+            "type": "string",
+            "const": "hotspots"
         },
         "account": {
             "title": "Account",
@@ -66,153 +70,18 @@
                 }
             ]
         },
-        "display_extra": {
-            "title": "Display Extra Properties",
-            "type": "object",
-            "properties": {
-                "hideAnchorItem": {
-                    "title": "Hide Anchor Item",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hideAnchorItem"
-                        }
-                    ]
-                },
-                "clickableImageMnM": {
-                    "title": "Enable Collage Image Swapping (with MnM)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableImageMnM"
-                        }
-                    ]
-                },
-
-                "bundleCounter": {
-                    "title": "Bundle Counter Visibility (with MnM)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounter"
-                        }
-                    ]
-                },
-                "clickableModalDots": {
-                    "title": "Advancement Progress Indicator (with MnM)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableModalDots"
-                        }
-                    ]
-                },
-
-                "bundleProductList": {
-                    "title": "Product List Display (without MnM)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleProductList"
-                        }
-                    ]
-                },
-
-                "clickableCarouselDots": {
-                    "title": "Advancement Progress Indicator (dots)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselDots"
-                        }
-                    ]
-                },
-
-                "clickableCarouselAdvancementRate": {
-                    "title": "Carousel Advancement Rate",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselAdvancementRate"
-                        }
-                    ]
-                },
-                
-                "clickableCarouselNextItemPeek": {
-                    "title": "Next Bundle Peek",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselNextItemPeek"
-                        }
-                    ]
-                },
-
-                "clickableCarouselPreviousItemPeek": {
-                    "title": "Previous Bundle Peek",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickableCarouselPreviousItemPeek"
-                        }
-                    ]
-                },
-                "hotspotsAppearOnLoad": {
-                    "title": "Show Over Modals on Load",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspotsAppearOnLoad"
-                        }
-                    ]
-                },
-
-                "hotspotsOverlayOrder": {
-                    "title": "Hotspots Overlay Order - Input",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspotsOverlayOrder"
-                        }
-                    ]
-                },
-
-                "individualHotspots": {
-                    "title": "Individual Hotspots",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/individualHotspots"
-                        }
-                    ]
-                }
-            }
-        },
-        "text": {
-            "title": "Text Properties",
-            "type": "object",
-            "properties": {
-                "viewDetailsCTA": {
-                    "title": "View Details Default Text",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/viewDetailsCTA"
-                        }
-                    ]
-                },
-
-                "itemLinkCTA": {
-                    "title": "SHOP Default Text",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemLinkCTA"
-                        }
-                    ]
-                },
-
-                "itemDetailsModalHeader": {
-                    "title": "Details Modal Default Text",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemDetailsModalHeader"
-                        }
-                    ]
-                }
-            }
-        },
 		"price": {
             "title": "Price Properties",
             "allOf": [
                 {
                     "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/price"
+                }
+            ]
+        },
+        "hotspots": {
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspots"
                 }
             ]
         }

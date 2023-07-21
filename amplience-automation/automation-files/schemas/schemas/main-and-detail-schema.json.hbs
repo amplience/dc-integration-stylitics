@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "https://demostore.amplience.com/content/stylitics/main-and-detail",
-	"title": "Stylitics Classic",
+	"title": "Stylitics Main and Detail",
 	"description": "Content type for a stylitics main and detail widget as per https://web-assets.stylitics.com/demo-site/latest/Classic-Default.html",
 	"allOf": [
 		{
@@ -27,6 +27,10 @@
                     "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
                 }
             ]
+        },
+        "view": {
+            "type": "string",
+            "const": "mainAndDetail"
         },
         "account": {
             "title": "Account",
@@ -66,25 +70,18 @@
                 }
             ]
         },
-        "display_extra": {
-            "title": "Display Extra Properties",
-            "type": "object",
-            "properties": {
-                "swipeableCarouselArrows": {
-                    "title": "Carousel Arrows (Mobile)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselArrows"
-                        }
-                    ]
-                }
-            }
-        },
 		"price": {
             "title": "Price Properties",
             "allOf": [
                 {
                     "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/price"
+                }
+            ]
+        },
+        "mainAndDetail": {
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/mainAndDetail"
                 }
             ]
         }

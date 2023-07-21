@@ -5,6 +5,7 @@
       "name": "Stylitics - Hotspots Example",
       "schema": "https://demostore.amplience.com/content/stylitics/hotspots"
     },
+    "type": "hotspots",
     "api": {
       "min": 3,
       "max": 6
@@ -14,22 +15,24 @@
       "disableMnM": true,
       "swipeableCarouselDots": false
     },
-    "display_extra": {
-      "hideAnchorItem": false,
-      "clickableImageMnM": false,
-      "bundleCounter": true,
-      "clickableModalDots": false,
-      "bundleProductList": "slideout-on-click",
-      "clickableCarouselDots": false,
-      "clickableCarouselAdvancementRate": 1,
-      "clickableCarouselNextItemPeek": 0,
-      "clickableCarouselPreviousItemPeek": 0,
-      "hotspotsAppearOnLoad": false,
-      "individualHotspots": false,
-      "hotspotsOverlayOrder": [
-        "name",
-        "sales_price,price"
-      ]
+    "hotspots": {
+      "display": {
+        "hideAnchorItem": false,
+        "clickableImageMnM": false,
+        "bundleCounter": true,
+        "clickableModalDots": false,
+        "bundleProductList": "slideout-on-click",
+        "clickableCarouselDots": false,
+        "clickableCarouselAdvancementRate": 1,
+        "clickableCarouselNextItemPeek": 0,
+        "clickableCarouselPreviousItemPeek": 0,
+        "hotspotsAppearOnLoad": false,
+        "individualHotspots": false,
+        "hotspotsOverlayOrder": [
+          "name",
+          "sales_price,price"
+        ]
+      }
     },
     "price": {
       "hideDoubleZeroCents": false

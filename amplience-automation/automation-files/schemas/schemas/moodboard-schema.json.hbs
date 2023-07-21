@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "https://demostore.amplience.com/content/stylitics/moodboard",
-	"title": "Stylitics Classic",
+	"title": "Stylitics Moodboard",
 	"description": "Content type for a stylitics moodboard widget as per https://web-assets.stylitics.com/demo-site/latest/Classic-Default.html",
 	"allOf": [
 		{
@@ -27,6 +27,10 @@
                     "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
                 }
             ]
+        },
+        "view": {
+            "type": "string",
+            "const": "moodboard"
         },
         "account": {
             "title": "Account",
@@ -66,176 +70,18 @@
                 }
             ]
         },
-        "display_extra": {
-            "title": "Display Extra Properties",
-            "type": "object",
-            "properties": {
-                "bundleCounter": {
-                    "title": "Bundle Counter Visibility (with MnM)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounter"
-                        }
-                    ]
-                },
-                "swipeableCarouselLeftPadding": {
-                    "title": "Left Padding (Mobile)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselLeftPadding"
-                        }
-                    ]
-                },
-                "swipeableCarouselArrows": {
-                    "title": "Carousel Arrows (Mobile)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/swipeableCarouselArrows"
-                        }
-                    ]
-                },
-
-                "labelStyle": {
-                    "title": "Label Style",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/labelStyle"
-                        }
-                    ]
-                },
-
-                "labelBorderColor": {
-                    "title": "Label Border Color",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/labelBorderColor"
-                        }
-                    ]
-                },
-
-                "dynamicLabelBackground": {
-                    "title": "Dynamic Label Background",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/dynamicLabelBackground"
-                        }
-                    ]
-                },
-                "showArrowsMnM": {
-                    "title": "MnM Design with Arrows",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/showArrowsMnM"
-                        }
-                    ]
-                },
-
-                "moodboardImageType": {
-                    "title": "Image Type",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/moodboardImageType"
-                        }
-                    ]
-                },
-
-                "coerceMoodboardImageAspectRatio": {
-                    "title": "Image Aspect Ratio",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/coerceMoodboardImageAspectRatio"
-                        }
-                    ]
-                },
-
-                "mobileCtaClickOnly": {
-                    "title": "Mobile Product Shelf",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/mobileCtaClickOnly"
-                        }
-                    ]
-                },
-
-                "hideAnchorItemCard": {
-                    "title": "Anchor Item Card Visibility",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hideAnchorItemCard"
-                        }
-                    ]
-                },
-
-                "maxGridSize": {
-                    "title": "Grid Size",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/maxGridSize"
-                        }
-                    ]
-                }
-            }
-        },
-        "navigation": {
-            "title": "Navigation Properties",
-            "type": "object",
-            "properties": {
-                "clickItemLinkDesktop": {
-                    "title": "Shop Button Link Behavior (Desktop)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickItemLinkDesktop"
-                        }
-                    ]
-                },
-
-                "clickItemLinkMobile": {
-                    "title": "Shop Button Link Behavior (Mobile)",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/clickItemLinkMobile"
-                        }
-                    ]
-                }
-            }
-        },
-        "text": {
-            "title": "Text Properties",
-            "type": "object",
-            "properties": {
-                "itemLinkCTA": {
-                    "title": "SHOP Default Text",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemLinkCTA"
-                        }
-                    ]
-                },
-
-                "itemDetailsModalHeader": {
-                    "title": "Details Modal Default Text",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/itemDetailsModalHeader"
-                        }
-                    ]
-                },
-
-                "bundleCounterLabel": {
-                    "title": "Bundle Counter Prefix Label",
-                    "allOf": [
-                        {
-                            "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/bundleCounterLabel"
-                        }
-                    ]
-                }
-            }
-        },
 		"price": {
             "title": "Price Properties",
             "allOf": [
                 {
                     "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/price"
+                }
+            ]
+        },
+        "moodboard": {
+            "allOf": [
+                {
+                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/moodboard"
                 }
             ]
         }
