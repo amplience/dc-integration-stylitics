@@ -34,6 +34,10 @@ function flattenGenericType(base, type): void {
         if (type.text) {
             base.text = {...base.text, ...type.text}
         }
+
+        if (type.api) {
+            base.api = {...base.api, ...type.api}
+        }
     }
 }
 
@@ -110,7 +114,7 @@ function toArgumentContentType(body: ContentItem): ArgumentContentType {
 export function fromContentItem(body: GenericWidgetContentItem<string> | SpecificWidgetContentItem<string>) : WidgetInitArgs {
     const type = toArgumentContentType(body);
 
-    if (type === 'generic') {
+    if (type === 'generic' || 'type' in body) {
         return fromGeneric(body as GenericWidgetContentItem<string>);
     } else {
         return fromSpecific(body as SpecificWidgetContentItem<string>, type);
