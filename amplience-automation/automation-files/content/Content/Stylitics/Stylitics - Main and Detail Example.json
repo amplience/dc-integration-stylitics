@@ -3,7 +3,8 @@
   "body": {
     "_meta": {
       "name": "Styliyics - Main and Detail Example",
-      "schema": "https://demostore.amplience.com/content/stylitics/main-and-detail"
+      "schema": "https://demostore.amplience.com/content/stylitics/main-and-detail",
+      "deliveryKey": "stylitics/main-and-detail-example"
     },
     "header": {
       "values": [

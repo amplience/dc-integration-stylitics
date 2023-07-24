@@ -3,7 +3,8 @@
   "body": {
     "_meta": {
       "name": "Stylitics - Moodboard Example 2",
-      "schema": "https://demostore.amplience.com/content/stylitics/moodboard"
+      "schema": "https://demostore.amplience.com/content/stylitics/moodboard",
+      "deliveryKey": "stylitics/moodbaord-example-2"
     },
     "view": "moodboard",
     "api": {

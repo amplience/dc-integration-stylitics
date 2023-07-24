@@ -3,7 +3,8 @@
   "body": {
     "_meta": {
       "name": "Stylitics - Gallery Example 2",
-      "schema": "https://demostore.amplience.com/content/stylitics/gallery"
+      "schema": "https://demostore.amplience.com/content/stylitics/gallery",
+      "deliveryKey": "stylitics/gallery-example-2"
     },
     "header": {
       "values": [
