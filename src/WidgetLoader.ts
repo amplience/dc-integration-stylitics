@@ -38,6 +38,13 @@ const styliticsViewMapping : { [key: string]: ViewMapping } = {
     }
 }
 
+/**
+ * Ensure the given Stylitics view has its script loaded.
+ * Only one instance of this module should exist with no stylitics scripts
+ * manually included for this to function properly.
+ * @param view The Stylitics view to ensure is loaded
+ * @returns A promise that is resolved when the view is loaded
+ */
 function ensureViewLoaded(view: ViewMapping): Promise<void> {
     return new Promise((resolve, reject) => {
         if (view.loaded) {
