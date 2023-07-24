@@ -5,7 +5,7 @@
       "name": "Stylitics - Hotspots Example 2",
       "schema": "https://demostore.amplience.com/content/stylitics/hotspots"
     },
-    "type": "hotspots",
+    "view": "hotspots",
     "api": {
       "min": 3,
       "max": 6

@@ -5,7 +5,7 @@
       "name": "Stylitics - Moodboard Example",
       "schema": "https://demostore.amplience.com/content/stylitics/moodboard"
     },
-    "type": "moodboard",
+    "view": "moodboard",
     "api": {
       "min": 3,
       "max": 6

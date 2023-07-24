@@ -16,7 +16,7 @@
         "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
       }
     },
-    "type": "mainAndDetail",
+    "view": "mainAndDetail",
     "api": {
       "min": 3,
       "max": 6
