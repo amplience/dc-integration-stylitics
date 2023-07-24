@@ -3,7 +3,8 @@
   "body": {
     "_meta": {
       "name": "Stylitics - Hotspots Example",
-      "schema": "https://demostore.amplience.com/content/stylitics/hotspots"
+      "schema": "https://demostore.amplience.com/content/stylitics/hotspots",
+      "deliveryKey": "stylitics/hotspots-example"
     },
     "view": "hotspots",
     "api": {
