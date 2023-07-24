@@ -1,5 +1,7 @@
 export interface ContentItem {
     _meta: {
+        deliveryKey?: string,
+        name?: string,
         schema: string
     }
 }

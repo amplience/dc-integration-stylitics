@@ -8,13 +8,35 @@ export type GenericWidgetType =
     'gallery' |
     'mainAndDetail';
 
-export interface GenericWidgetContentItem<StringType> extends ContentItem, CommonWidgetProps {
+export interface CommonWidgetContentItem extends ContentItem, CommonWidgetProps {
     view: GenericWidgetType,
     account: string,
-    sku: string,
-    mainAndDetail: MainAndDetailWidgetProps,
-    classic: ClassicWidgetProps<StringType>,
-    hotspots: HotspotWidgetProps<StringType, WidgetHotspotOverlayOrderContent>,
-    moodboard: MoodboardWidgetProps<StringType>,
-    gallery: GalleryWidgetProps<StringType>
+    sku?: string,
 }
+
+export interface MainAndDetailWidgetContentItem extends CommonWidgetContentItem {
+    mainAndDetail: MainAndDetailWidgetProps,
+}
+
+export interface ClassicWidgetContentItem<StringType> extends CommonWidgetContentItem {
+    classic: ClassicWidgetProps<StringType>,
+}
+
+export interface HotspotWidgetContentItem<StringType> extends CommonWidgetContentItem {
+    hotspots: HotspotWidgetProps<StringType, WidgetHotspotOverlayOrderContent>,
+}
+
+export interface MoodboardWidgetContentItem<StringType> extends CommonWidgetContentItem {
+    moodboard: MoodboardWidgetProps<StringType>,
+}
+
+export interface GalleryWidgetContentItem<StringType> extends CommonWidgetContentItem {
+    gallery: GalleryWidgetProps<StringType>,
+}
+
+export type GenericWidgetContentItem<StringType> =
+    MainAndDetailWidgetContentItem |
+    ClassicWidgetContentItem<StringType> |
+    HotspotWidgetContentItem<StringType> |
+    MoodboardWidgetContentItem<StringType> |
+    GalleryWidgetContentItem<StringType>;

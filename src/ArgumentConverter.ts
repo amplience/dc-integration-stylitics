@@ -43,10 +43,11 @@ function flattenGenericType(base, type): void {
 
 /**
  * Flatten common configuration from the content item into Stylitics widget configuration.
- * @param result 
+ * @param body The content item body containing the widget arguments
+ * @param result Stylitics Widget arguments
  */
-function flattenCommon(result: any): void {
-    result.api = {...result.api, item_number: result.sku};
+function flattenCommon(body: GenericWidgetContentItem<string>, result: any): void {
+    result.api = {...result.api, item_number: body.sku};
 
     if (result.display && result.display.hotspotsOverlayOrder) {
         result.display.hotspotsOverlayOrder = result.display.hotspotsOverlayOrder.map(order => order.split(','));
@@ -60,11 +61,17 @@ function flattenCommon(result: any): void {
  * @returns Stylitics Widget arguments
  */
 export function fromGeneric(body: GenericWidgetContentItem<string>) : WidgetInitArgs {
-    const result = {...body} as any;
+    const result = {
+        view: body.view,
+        account: body.account,
+        api: body.api,
+        display: body.display,
+        price: body.price,
+    } as any;
 
-    flattenGenericType(result, result[result.view]);
+    flattenGenericType(result, body[result.view]);
 
-    flattenCommon(result);
+    flattenCommon(body, result);
 
     return result;
 }
