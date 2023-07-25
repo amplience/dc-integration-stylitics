@@ -26,9 +26,6 @@
     "prepare-major-release": "run-s build version:major",
     "import": "ts-node scripts/amplience/index.ts import"
   },
-  "exports": {
-    ".": "./dist/index.js"
-  },
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
