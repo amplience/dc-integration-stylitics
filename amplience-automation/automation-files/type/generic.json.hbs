@@ -1,23 +1,28 @@
 {
-  "contentTypeUri": "https://demostore.amplience.com/content/stylitics/classic",
+  "contentTypeUri": "https://demostore.amplience.com/content/stylitics/generic",
   "status": "ACTIVE",
   "settings": {
-    "label": "Stylitics - Classic",
+    "label": "Stylitics - Generic",
     "icons": [
       {
         "size": 256,
-        "url": "https://nmrsaalphatest.a.bigcontent.io/v1/static/icon-stylitics-classic"
+        "url": "https://{{hub}}.a.bigcontent.io/v1/static/icon-stylitics-generic"
       }
     ],
     "visualizations": [
       {
         "label": "JSON",
-        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&{{cms.hub}}&realtime=true",
+        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&{{hub}}&realtime=true",
         "default": false
       },
       {
         "label": "Development",
         "templatedUri": "http://localhost:3000/cms/visualization?content=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true",
+        "default": false
+      },
+      {
+        "label": "CRS",
+        "templatedUri": "https://\{{vse.domain}}/v1/content/{{hub}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
         "default": false
       },
       {
@@ -29,24 +34,15 @@
         "label": "Site",
         "templatedUri": "{{url}}/visualization?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
         "default": true
-      },
-      {
-        "label": "CRS",
-        "templatedUri": "https://\{{vse.domain}}/v1/content/nmrsaalphatest/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
-        "default": false
       }
     ],
     "cards": [
       {
-        "templatedUri": "https://\{{vse.domain}}/v1/content/nmrsaalphatest/content-item/\{{content.sys.id}}?template=stylitics-crs-card&locale=en-US,en-*,*"
+        "templatedUri": "https://\{{vse.domain}}/v1/content/{{hub}}/content-item/\{{content.sys.id}}?template=stylitics-crs-card&locale=en-US,en-*,*"
       }
     ]
   },
   "repositories": [
-    "content",
-    "contentfr",
-    "contentde",
-    "contentit",
-    "contentes"
+    "content"
   ]
 }

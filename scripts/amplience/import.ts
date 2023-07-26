@@ -59,8 +59,8 @@ const createTempDir = (context: Context) => {
 }
 
 export const importArgs = (yargs: Argv) => {
-    return yargs
-        .option('automationDir', {
+    return yargs.
+        option('automationDir', {
             alias: 'a',
             describe: 'automation files directory',
             default: './amplience-automation/automation-files',
@@ -91,19 +91,9 @@ export const importArgs = (yargs: Argv) => {
             required: true,
             type: 'string'
         })
-        .option('slotsRepoId', {
-            describe: 'slots repository id',
-            required: true,
-            type: 'string'
-        })
-        .option('sitestructureRepoId', {
-            describe: 'site structure repository id',
-            required: true,
-            type: 'string'
-        })
         .option('mapFile', {
             describe: 'mapFile',
-            default: null,
+            default: '',
             type: 'string'
         })
         
@@ -112,13 +102,10 @@ export const importArgs = (yargs: Argv) => {
 export const importHandler = async (context: Arguments<Context>): Promise<any> => {
     createTempDir(context)
 
-    if (!context.sfccUrl && context.sfccVersion && context.authSecret && context.authClientId && context.siteId) {
-        console.warn(`Missing SFCC configuration, product selector extension will not be usable.`)
-    }
-
-    // Getting visualisation name and url from Amplience default config
-    context.visualisations = amplience.visualisations
-
+    // Getting url from Amplience default config
+    context.url = amplience.default.url
+    context.hub = amplience.default.hub
+    
     console.log(`Compiling templates and copying files...`)
     await compileTemplates(context.automationDir, context.tempDir, context)
     const mappingFile = context.mapFile || join(process.env[process.platform == 'win32' ? 'USERPROFILE' : 'HOME'] || __dirname, '.amplience', 'imports', `sfcc-${context.hubId}.json`)
