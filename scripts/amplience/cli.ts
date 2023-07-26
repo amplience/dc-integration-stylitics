@@ -10,6 +10,8 @@ export type Context = {
     clientSecret: string,
     contentRepoId: string,
     mapFile: string,
+    hub: string,
+    url: string
 }
 
 const configureYargs = (yargInstance: Argv): Promise<Arguments> => {
