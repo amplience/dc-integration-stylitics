@@ -17,7 +17,7 @@
       },
       {
         "label": "JSON",
-        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&{{hub.name}}&realtime=true",
+        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub=\{{hub.name}}&realtime=true",
         "default": false
       },
       {
@@ -32,13 +32,13 @@
       },
       {
         "label": "CRS",
-        "templatedUri": "https://\{{vse.domain}}/v1/content/{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
+        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
         "default": false
       }
     ],
     "cards": [
       {
-        "templatedUri": "https://\{{vse.domain}}/v1/content/{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-card&locale=en-US,en-*,*"
+        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-card&locale=en-US,en-*,*"
       }
     ]
   },
