@@ -95,11 +95,6 @@ export const importArgs = (yargs: Argv) => {
             default: '',
             type: 'string'
         })
-        .option('hub', {
-            describe: 'hub name',
-            required: true,
-            type: 'string'
-        })
         .option('url', {
             describe: 'production url',
             required: true,

@@ -10,7 +10,6 @@ export type Context = {
     clientSecret: string,
     contentRepoId: string,
     mapFile: string,
-    hub: string,
     url: string
 }
 
