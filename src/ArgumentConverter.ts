@@ -69,7 +69,9 @@ export function fromGeneric(body: GenericWidgetContentItem<string>) : WidgetInit
         price: body.price,
     } as any;
 
-    flattenGenericType(result, body[result.view]);
+    const type = body.hasOwnProperty(result.view) ? body[result.view] : undefined;
+
+    flattenGenericType(result, type);
 
     flattenCommon(body, result);
 
