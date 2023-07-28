@@ -1,5 +1,4 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
-import _ from 'lodash'
 import { HttpMethod } from 'dc-management-sdk-js'
 
 export type OAuthRestClientInterface = {

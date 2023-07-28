@@ -1,8 +1,8 @@
 {
-  "name": "ecomm-toolkit",
-  "label": "eCommerce Toolkit",
+  "name": "ecomm-toolkit-stylitics",
+  "label": "eCommerce Toolkit Stylitics",
   "description": "Interfaces with core eComm elements like product, categories, segments",
-  "url": "https://dc-extension-ecomm-toolkit.vercel.app/",
+  "url": "https://ecomm-toolkit.extensions.content.amplience.net",
   "height": 200,
   "enabledForAllContentTypes": true,
   "category": "CONTENT_FIELD",

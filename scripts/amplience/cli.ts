@@ -5,12 +5,12 @@ import {importArgs, importHandler} from './import'
 export type Context = {
     automationDir: string,
     tempDir: string,
-    mapFile: string,
     hubId: string,
     clientId: string,
     clientSecret: string,
     contentRepoId: string,
-    slotsRepoId: string,
+    mapFile: string,
+    url: string
 }
 
 const configureYargs = (yargInstance: Argv): Promise<Arguments> => {

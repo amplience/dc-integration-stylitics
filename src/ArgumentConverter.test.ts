@@ -382,7 +382,7 @@ describe('fromGeneric', function() {
             },
             _meta: {
                 deliveryKey: 'stylitics/main-and-detail-example',
-                name: 'Styliyics - Main and Detail Example',
+                name: 'Stylitics - Main and Detail Example',
                 schema: 'https://demostore.amplience.com/content/stylitics/main-and-detail'
             }
         }
