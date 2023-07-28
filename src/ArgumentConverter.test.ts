@@ -3,7 +3,7 @@ import { WidgetInitArgs, fromContentItem } from './ArgumentConverter';
 
 describe('fromGeneric', function() {
     test('Convert a minimal content item', () => {
-        const item: GenericWidgetContentItem<string> = {
+        const item: GenericWidgetContentItem<string> & {unusedField: string} = {
             _meta: {
                 schema: 'https://demostore.amplience.com/content/stylitics/classic'
             },
@@ -34,7 +34,8 @@ describe('fromGeneric', function() {
                     clickItemLinkDesktop: 'new-tab',
                     clickItemLinkMobile: 'same-tab'
                 }
-            }
+            },
+            unusedField: 'willBeRemoved'
         }
 
         expect(fromContentItem(item)).toEqual({
@@ -507,5 +508,39 @@ describe('fromGeneric', function() {
         } as WidgetInitArgs);
     });
 
-    // Error when type is not recognized
+    test('Doesn\'t break when extras object is not used', () => {
+        const item: any = {
+            _meta: {
+                schema: 'https://demostore.amplience.com/content/stylitics/classic'
+            },
+            view: 'classic',
+            account: 'account',
+            sku: 'AN_SKU_1',
+            api: {},
+            display: {
+                imglazyLoadNextScreen: true,
+                disableMnM: false,
+                swipeableCarouselDots: false
+            },
+            price: {
+                hideDoubleZeroCents: false
+            },
+        }
+
+        expect(fromContentItem(item)).toEqual({
+            account: 'account',
+            api: {
+                item_number: 'AN_SKU_1',
+            },
+            display: {
+                imglazyLoadNextScreen: true,
+                disableMnM: false,
+                swipeableCarouselDots: false
+            },
+            price: {
+                hideDoubleZeroCents: false,
+            },
+            view: 'classic',
+        } as any);
+    });
 });

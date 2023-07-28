@@ -92,7 +92,11 @@ function ensureViewLoaded(view: ViewMapping): Promise<void> {
 export async function createWidget(element: HTMLElement, args: WidgetInitArgs): Promise<StyliticsWidget> {
     const styliticsObj = styliticsViewMapping[args.view] || styliticsViewMapping['classic']
 
-    await ensureViewLoaded(styliticsObj);
+    try {
+        await ensureViewLoaded(styliticsObj);
+    } catch {
+        throw new Error(`Could not load widget script for ${styliticsObj.name}.`);
+    }
 
     const widgetType = window[styliticsObj.name] as any;
     if (widgetType) {
