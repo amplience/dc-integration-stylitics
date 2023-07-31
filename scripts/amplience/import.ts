@@ -68,7 +68,7 @@ export const importArgs = (yargs: Argv) => {
         .option('tempDir', {
             alias: 't',
             describe: 'temporary directory for all run files',
-            default: join(tmpdir(), `amplience-sfcc/amplience-sfcc-${nanoid()}`)
+            default: join(tmpdir(), `amplience-stylitics/amplience-stylitics-${nanoid()}`)
         })
         .option('hubId', {
             describe: 'amplience hub id',
@@ -107,7 +107,7 @@ export const importHandler = async (context: Arguments<Context>): Promise<any> =
     
     console.log(`Compiling templates and copying files...`)
     await compileTemplates(context.automationDir, context.tempDir, context)
-    const mappingFile = context.mapFile || join(process.env[process.platform == 'win32' ? 'USERPROFILE' : 'HOME'] || __dirname, '.amplience', 'imports', `sfcc-${context.hubId}.json`)
+    const mappingFile = context.mapFile || join(process.env[process.platform == 'win32' ? 'USERPROFILE' : 'HOME'] || __dirname, '.amplience', 'imports', `stylitics-${context.hubId}.json`)
 
     try {
         console.log(`Configuring dc-cli...`)

@@ -6,7 +6,7 @@
   "height": 200,
   "enabledForAllContentTypes": true,
   "category": "CONTENT_FIELD",
-  "parameters": "{\n  \"vendor\": \"rest\",\n  \"codec_params\": {\n    \"productURL\": \"https://presalesadisws.s3-eu-west-1.amazonaws.com/dynamic-content/stylitics/data/stylitics-products.json\",\n    \"categoryURL\": \"https://presalesadisws.s3-eu-west-1.amazonaws.com/dynamic-content/stylitics/data/stylitics-categories.json\",\n    \"customerGroupURL\": \"https://demostore-catalog.s3.us-east-2.amazonaws.com/customerGroups.json\",\n    \"translationsURL\": \"https://demostore-catalog.s3.us-east-2.amazonaws.com/translations.json\"\n  }\n}",
+  "parameters": "{\n  \"vendor\": \"rest\",\n  \"codec_params\": {\n    \"productURL\": \"https://demostore-catalog.s3.us-east-2.amazonaws.com/products.json\",\n    \"categoryURL\": \"https://demostore-catalog.s3.us-east-2.amazonaws.com/categories.json\",\n    \"customerGroupURL\": \"https://demostore-catalog.s3.us-east-2.amazonaws.com/customerGroups.json\",\n    \"translationsURL\": \"https://demostore-catalog.s3.us-east-2.amazonaws.com/translations.json\"\n  }\n}",
   "snippets": [
     {
       "label": "User Segments - Multi select - object",

@@ -125,11 +125,11 @@
           "values": [
             {
               "locale": "en-US",
-              "value": "asdfasdfasdfasdf"
+              "value": "View Details en-US"
             },
             {
               "locale": "fr-FR",
-              "value": "tyuityuity"
+              "value": "View Details fr-FR"
             }
           ],
           "_meta": {
