@@ -1,0 +1,48 @@
+{
+  "contentTypeUri": "https://demostore.amplience.com/content/stylitics/generic",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "Stylitics - Generic",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://styliticsdemo.a.bigcontent.io/v1/static/icon-stylitics-generic"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "JSON",
+        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub=\{{hub.name}}&realtime=true",
+        "default": false
+      },
+      {
+        "label": "Development",
+        "templatedUri": "http://localhost:3000/cms/visualization?content=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true",
+        "default": false
+      },
+      {
+        "label": "CRS",
+        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
+        "default": false
+      },
+      {
+        "label": "HTML",
+        "templatedUri": "https://dev-solutions.s3.amazonaws.com/rhys/stylitics/stylitics-generic-html-lib.html?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
+        "default": false
+      },
+      {
+        "label": "Site",
+        "templatedUri": "{{url}}/visualization?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
+        "default": true
+      }
+    ],
+    "cards": [
+      {
+        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-card&locale=en-US,en-*,*"
+      }
+    ]
+  },
+  "repositories": [
+    "content"
+  ]
+}

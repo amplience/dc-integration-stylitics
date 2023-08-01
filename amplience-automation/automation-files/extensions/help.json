@@ -1,0 +1,16 @@
+{
+  "name": "help",
+  "label": "Help",
+  "description": "Add markdown help text to the content form.",
+  "url": "https://help.extensions.content.amplience.net",
+  "height": 68,
+  "enabledForAllContentTypes": false,
+  "category": "CONTENT_FIELD",
+  "parameters": "{}",
+  "snippets": [{
+      "label": "Help Block",
+      "body": "{\n    \"type\": \"object\",\n    \"ui:extension\": {\n      \"name\": \"help\",\n      \"params\": {\n          \"title\": \"Help Message Title\",\n          \"message\": \"Markdown message body. Replace with any markdown string.\"\n      }\n    }\n}"
+  }],
+  "settings": "{\"API\":{\"READ\":false,\"EDIT\":false},\"SANDBOX\":{\"SAME_ORIGIN\":false,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
+  "status": "ACTIVE"
+}
