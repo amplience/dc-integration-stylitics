@@ -15,6 +15,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
           package-name: dc-integration-stylitics
+          prerelease: true
 
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.release_created }}
