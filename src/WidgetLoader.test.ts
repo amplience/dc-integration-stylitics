@@ -194,5 +194,9 @@ describe('createWidget', function() {
         scriptTag.onerror();
 
         await expect(widget1Promise).rejects.toMatchInlineSnapshot(`[Error: Could not load widget script for StyliticsGalleryWidget.]`);
+
+        // A second load should also fail.
+
+        await expect(createWidget(element, args)).rejects.toMatchInlineSnapshot(`[Error: Could not load widget script for StyliticsGalleryWidget.]`);
     });
 });

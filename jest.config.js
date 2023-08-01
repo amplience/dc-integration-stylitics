@@ -7,5 +7,7 @@ module.exports = {
   preset: 'ts-jest',
   coveragePathIgnorePatterns: [
     '^.+\\.mocks\.ts?$'
-  ]
+  ],
+  collectCoverage: true,
+  coverageDirectory: 'coverage'
 };
