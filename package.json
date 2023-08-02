@@ -16,7 +16,7 @@
     "build-dist": "run-p build-dist:*",
     "build-dist:dev": "NODE_ENV=development webpack",
     "build-dist:prod": "NODE_ENV=production webpack",
-    "prepare": "eslint && npm run clean && tsc",
+    "prepare": "eslint && npm run clean && npm run build",
     "test": "jest --silent --verbose",
     "version:patch": "standard-version --release-as patch",
     "version:minor": "standard-version --release-as minor",
