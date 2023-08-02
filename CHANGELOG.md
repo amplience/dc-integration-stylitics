@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/amplience/dc-integration-stylitics/compare/v0.1.1...v0.1.2) (2023-08-02)
+
+
+### Bug Fixes
+
+* remove dist from npm ignore, fix script paths ([#17](https://github.com/amplience/dc-integration-stylitics/issues/17)) ([9460a3e](https://github.com/amplience/dc-integration-stylitics/commit/9460a3ec60ab85584c9acbbde88631c2866e2bb4))
+
 ## [0.1.1](https://github.com/amplience/dc-integration-stylitics/compare/v0.1.0...v0.1.1) (2023-08-02)
 
 
