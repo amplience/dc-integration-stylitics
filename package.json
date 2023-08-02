@@ -1,6 +1,6 @@
 {
   "name": "@amplience/dc-integration-stylitics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Library of utilities to make using Amplience and Stylitics together simpler.",
   "types": "build/main/index.d.ts",
   "typings": "build/main/index.d.ts",

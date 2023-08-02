@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/amplience/dc-integration-stylitics/compare/v0.1.0...v0.1.1) (2023-08-02)
+
+
+### Bug Fixes
+
+* run full build for prepare script ([#15](https://github.com/amplience/dc-integration-stylitics/issues/15)) ([4a8155a](https://github.com/amplience/dc-integration-stylitics/commit/4a8155afd597211d1c5906bcab1d19a30817b411))
+
 ## [0.1.0](https://github.com/amplience/dc-integration-stylitics/compare/v0.1.0...v0.1.0) (2023-08-01)
 
 
