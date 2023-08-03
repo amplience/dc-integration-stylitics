@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/content/stylitics/gallery",
+	"$id": "{{schemaBaseUri}}/content/stylitics/gallery",
 	"title": "Stylitics Gallery",
 	"description": "Content type for a stylitics gallery widget as per https://web-assets.stylitics.com/demo-site/latest/Classic-Default.html",
 	"allOf": [
@@ -36,7 +36,7 @@
             "title": "Account",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/account"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/account"
                 }
             ]
         },
@@ -44,7 +44,7 @@
             "title": "API Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/api"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/api"
                 }
             ]
         },
@@ -52,7 +52,7 @@
             "title": "Display Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/display"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/display"
                 }
             ]
         },
@@ -60,14 +60,14 @@
             "title": "Price Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/price"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/price"
                 }
             ]
         },
         "gallery": {
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/gallery"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/gallery"
                 }
             ]
         }

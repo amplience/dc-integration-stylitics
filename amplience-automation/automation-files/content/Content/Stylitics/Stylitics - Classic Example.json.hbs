@@ -1,23 +1,23 @@
 {
-  "id": "ebc3d626-ecac-4158-8ad8-3dd59409fbfa",
+  "id": "aa0849e9-3f58-4af6-8444-3a1926ccb73f",
   "body": {
     "_meta": {
-      "name": "Stylitics - Gallery Example",
-      "schema": "https://demostore.amplience.com/content/stylitics/gallery",
-      "deliveryKey": "stylitics/gallery-example"
+      "name": "Stylitics - Classic Example",
+      "schema": "{{schemaBaseUri}}/content/stylitics/classic",
+      "deliveryKey": "stylitics/classic-example"
     },
     "header": {
       "values": [
         {
           "locale": "en-US",
-          "value": "Mens Top Picks Gallery"
+          "value": "Classic Italian Leather Bag Look"
         }
       ],
       "_meta": {
         "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
       }
     },
-    "view": "gallery",
+    "view": "classic",
     "api": {
       "min": 3,
       "max": 6
@@ -27,19 +27,21 @@
       "disableMnM": true,
       "swipeableCarouselDots": false
     },
-    "gallery": {
-      "api": {
-        "tags": "mens_stylistspicks_gallery"
-      },
+    "classic": {
       "display": {
         "hideAnchorItem": false,
         "clickableImageMnM": false,
         "bundleCounter": true,
         "clickableModalDots": false,
-        "bundleProductList": "product-list-on-hover",
+        "bundleProductList": "slideout-on-click",
+        "clickableCarouselDots": false,
+        "clickableCarouselAdvancementRate": 1,
+        "clickableCarouselNextItemPeek": 0,
+        "clickableCarouselPreviousItemPeek": 0,
+        "clickableCarouselGutterWidth": 16,
         "swipeableCarouselLeftPadding": 0,
         "swipeableCarouselArrows": false,
-        "mobileGalleryLayout": false
+        "dynamicLabelBackground": false
       },
       "navigation": {
         "clickItemLinkDesktop": "new-tab",
@@ -49,16 +51,17 @@
     "price": {
       "hideDoubleZeroCents": false
     },
-    "account": "demo-womens"
+    "account": "demo-womens",
+    "sku": "BP508_NA6445"
   },
-  "version": 10,
-  "label": "Stylitics - Gallery Example",
+  "version": 2,
+  "label": "Stylitics - Classic Example",
   "status": "ACTIVE",
   "createdBy": "ff2c9bf5-61c0-4c01-966b-4443918c74a8",
-  "createdDate": "2023-07-10T14:14:50.318Z",
+  "createdDate": "2023-07-10T14:26:07.182Z",
   "lastModifiedBy": "ff2c9bf5-61c0-4c01-966b-4443918c74a8",
-  "lastModifiedDate": "2023-07-12T12:06:51.230Z",
-  "lastPublishedVersion": 10,
-  "lastPublishedDate": "2023-07-12T12:06:56.429Z",
-  "deliveryId": "ebc3d626-ecac-4158-8ad8-3dd59409fbfa"
+  "lastModifiedDate": "2023-07-10T14:32:51.466Z",
+  "lastPublishedVersion": 2,
+  "lastPublishedDate": "2023-07-11T15:04:58.318Z",
+  "deliveryId": "aa0849e9-3f58-4af6-8444-3a1926ccb73f"
 }
