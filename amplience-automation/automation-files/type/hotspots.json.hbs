@@ -11,8 +11,18 @@
     ],
     "visualizations": [
       {
+        "label": "HTML",
+        "templatedUri": "https://amp-product.s3.eu-west-1.amazonaws.com/integration-examples/dc-integration-stylitics/stylitics-generic-html.html?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
+        "default": true
+      },
+      {
         "label": "JSON",
         "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub=\{{hub.name}}&realtime=true",
+        "default": false
+      },
+      {
+        "label": "CRS",
+        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
         "default": false
       },
       {
@@ -23,16 +33,6 @@
       {
         "label": "Site",
         "templatedUri": "{{url}}/visualization?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
-        "default": true
-      },
-      {
-        "label": "HTML",
-        "templatedUri": "https://dev-solutions.s3.amazonaws.com/rhys/stylitics/stylitics-generic-html-lib.html?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
-        "default": false
-      },
-      {
-        "label": "CRS",
-        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
         "default": false
       }
     ],
