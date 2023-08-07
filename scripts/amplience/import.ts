@@ -119,8 +119,6 @@ export const importHandler = async (context: Arguments<Context>): Promise<any> =
     const templatePath = './amplience-automation/media/Templates'
     await compileTemplates(templatePath, templatePath, context)
 
-    return;
-
     const mappingFile = context.mapFile || join(process.env[process.platform == 'win32' ? 'USERPROFILE' : 'HOME'] || __dirname, '.amplience', 'imports', `stylitics-${context.hubId}.json`)
 
     try {
