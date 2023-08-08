@@ -22,7 +22,7 @@
       },
       {
         "label": "CRS",
-        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
+        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},*",
         "default": false
       },
       {
@@ -38,7 +38,7 @@
     ],
     "cards": [
       {
-        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-card&locale=en-US,en-*,*"
+        "templatedUri": "https://amp-product.s3.eu-west-1.amazonaws.com/integration-examples/dc-integration-stylitics/stylitics-card-html.html?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=*"
       }
     ]
   },
