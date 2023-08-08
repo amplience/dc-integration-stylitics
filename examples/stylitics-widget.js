@@ -13,7 +13,7 @@ function loadWidgets(account, locale, vse) {
 
         // Insantiate the SDK
         var ampSDKConfig = {
-            locale: locale || urlParams.get('locale'),
+            locale: locale || urlParams.get('locale') || '*',
             hubName: account || urlParams.get('ampAccount') || 'nmdemostore'
         }
         if (vse) ampSDKConfig.stagingEnvironment = vse
