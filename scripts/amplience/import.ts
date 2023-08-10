@@ -108,6 +108,13 @@ export const importArgs = (yargs: Argv) => {
             required: true,
             type: 'string'
         })
+        .option('omitExtensionEcommToolkit', {
+            alias: 'o',
+            describe: 'Use a text field for SKU rather than the ecomm toolkit extension.',
+            required: false,
+            boolean: true,
+            type: 'boolean'
+        })
 };
 
 export const importHandler = async (context: Arguments<Context>): Promise<any> => {
@@ -118,6 +125,8 @@ export const importHandler = async (context: Arguments<Context>): Promise<any> =
 
     const templatePath = './amplience-automation/media/Templates'
     await compileTemplates(templatePath, templatePath, context)
+
+    return;
 
     const mappingFile = context.mapFile || join(process.env[process.platform == 'win32' ? 'USERPROFILE' : 'HOME'] || __dirname, '.amplience', 'imports', `stylitics-${context.hubId}.json`)
 
