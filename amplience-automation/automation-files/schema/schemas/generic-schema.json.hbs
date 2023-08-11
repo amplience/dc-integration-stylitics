@@ -23,14 +23,6 @@
                 }
             }
         },
-        "header": {
-            "title": "Header",
-            "allOf": [
-                {
-                    "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
-                }
-            ]
-        },
         "view": {
             "title": "View Type",
             "description": "The rendering style of the Stylitics component",
@@ -55,7 +47,7 @@
         "sku": {
             "title": "SKU",
             "description": "The sku of the product to render",
-            "type": "string",
+            {{#unless omitExtensionEcommToolkit}}
             "ui:extension": {
                 "name": "ecomm-toolkit-stylitics",
                 "params": {
@@ -64,7 +56,9 @@
                     "data": "product",
                     "type": "string"
                 }
-            }
+            },
+            {{/unless}}
+            "type": "string"
         },
         "api": {
             "title": "API Properties",

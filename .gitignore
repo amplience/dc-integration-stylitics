@@ -5,4 +5,3 @@ dist
 node_modules
 .vscode/launch.json
 coverage/*
-amplience-automation/media/Templates/stylitics/stylitics-templateChooser.html
