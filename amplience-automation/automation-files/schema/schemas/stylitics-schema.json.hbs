@@ -366,6 +366,12 @@
             ]
         },
 
+        "productListMnM": {
+            "title": "Configure MnM Product List Display",
+            "description": "Set to true to open product list as a slideout (Only available when Mix and Match is enabled)",
+            "type": "boolean"
+        },
+
         "responsive": {
             "title": "Responsive Breakpoints",
             "description": "Breakpoints for how many columns should appear for different page widths. When empty, uses defaults.",
@@ -529,6 +535,14 @@
                             "allOf": [
                                 {
                                     "$ref": "#/definitions/dynamicLabelBackground"
+                                }
+                            ]
+                        },
+
+                        "productListMnM": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/productListMnM"
                                 }
                             ]
                         }
@@ -1029,6 +1043,14 @@
                             "allOf": [
                                 {
                                     "$ref": "#/definitions/mobileGalleryLayout"
+                                }
+                            ]
+                        },
+                        
+                        "productListMnM": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/productListMnM"
                                 }
                             ]
                         }
