@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://demostore.amplience.com/content/stylitics/generic",
+    "$id": "{{schemaBaseUri}}/content/stylitics/generic",
 
     "title": "Stylitics Generic",
     "description": "A sample content type that lets the user pick the view type required",
@@ -23,14 +23,6 @@
                 }
             }
         },
-        "header": {
-            "title": "Header",
-            "allOf": [
-                {
-                    "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
-                }
-            ]
-        },
         "view": {
             "title": "View Type",
             "description": "The rendering style of the Stylitics component",
@@ -48,14 +40,14 @@
             "title": "Account",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/account"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/account"
                 }
             ]
         },
         "sku": {
             "title": "SKU",
             "description": "The sku of the product to render",
-            "type": "string",
+            {{#unless omitExtensionEcommToolkit}}
             "ui:extension": {
                 "name": "ecomm-toolkit-stylitics",
                 "params": {
@@ -64,13 +56,15 @@
                     "data": "product",
                     "type": "string"
                 }
-            }
+            },
+            {{/unless}}
+            "type": "string"
         },
         "api": {
             "title": "API Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/api"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/api"
                 }
             ]
         },
@@ -78,7 +72,7 @@
             "title": "Display Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/display"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/display"
                 }
             ]
         },
@@ -86,42 +80,42 @@
             "title": "Price Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/price"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/price"
                 }
             ]
         },
         "classic": {
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/classic"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/classic"
                 }
             ]
         },
         "hotspots": {
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspots"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/hotspots"
                 }
             ]
         },
         "moodboard": {
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/moodboard"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/moodboard"
                 }
             ]
         },
         "gallery": {
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/gallery"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/gallery"
                 }
             ]
         },
         "mainAndDetail": {
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/mainAndDetail"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/mainAndDetail"
                 }
             ]
         }

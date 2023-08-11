@@ -1,5 +1,5 @@
 {
-  "contentTypeUri": "https://demostore.amplience.com/content/stylitics/gallery",
+  "contentTypeUri": "{{schemaBaseUri}}/content/stylitics/gallery",
   "status": "ACTIVE",
   "settings": {
     "label": "Stylitics - Gallery",
@@ -11,9 +11,9 @@
     ],
     "visualizations": [
       {
-        "label": "Development",
-        "templatedUri": "http://localhost:3000/cms/visualization?content=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true",
-        "default": false
+        "label": "HTML",
+        "templatedUri": "https://amp-product.s3.eu-west-1.amazonaws.com/integration-examples/dc-integration-stylitics/stylitics-generic-html.html?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
+        "default": true
       },
       {
         "label": "JSON",
@@ -21,24 +21,19 @@
         "default": false
       },
       {
-        "label": "Site",
-        "templatedUri": "{{url}}/visualization?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
-        "default": true
-      },
-      {
-        "label": "HTML",
-        "templatedUri": "https://dev-solutions.s3.amazonaws.com/rhys/stylitics/stylitics-generic-html-lib.html?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=\{{locales}}&realtime=true",
+        "label": "CRS",
+        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},*",
         "default": false
       },
       {
-        "label": "CRS",
-        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-visualisation&locale=\{{locales}},en-*,*",
+        "label": "React",
+        "templatedUri": "https://dc-integration-stylitics-sample-react.vercel.app/vis?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&realtime=true",
         "default": false
       }
     ],
     "cards": [
       {
-        "templatedUri": "https://\{{vse.domain}}/v1/content/\{{hub.name}}/content-item/\{{content.sys.id}}?template=stylitics-crs-card&locale=en-US,en-*,*"
+        "templatedUri": "https://amp-product.s3.eu-west-1.amazonaws.com/integration-examples/dc-integration-stylitics/stylitics-card-html.html?vse=\{{vse.domain}}&content=\{{content.sys.id}}&locale=*"
       }
     ]
   },

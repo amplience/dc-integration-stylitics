@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://demostore.amplience.com/content/stylitics/hotspots",
+	"$id": "{{schemaBaseUri}}/content/stylitics/hotspots",
 	"title": "Stylitics Hotspots",
 	"description": "Content type for a stylitics hotspots widget as per https://web-assets.stylitics.com/demo-site/latest/Classic-Default.html",
 	"allOf": [
@@ -20,14 +20,6 @@
 				}
 			}
 		},
-        "header": {
-            "title": "Header",
-            "allOf": [
-                {
-                    "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string"
-                }
-            ]
-        },
         "view": {
             "type": "string",
             "const": "hotspots"
@@ -36,14 +28,14 @@
             "title": "Account",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/account"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/account"
                 }
             ]
         },
 		"sku": {
 			"title": "SKU",
 			"description": "The sku of the product to render",
-			"type": "string",
+            {{#unless omitExtensionEcommToolkit}}
             "ui:extension": {
                 "name": "ecomm-toolkit-stylitics",
                 "params": {
@@ -52,13 +44,15 @@
                     "data": "product",
                     "type": "string"
                 }
-            }
+            },
+            {{/unless}}
+			"type": "string"
 		},
 		"api": {
             "title": "API Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/api"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/api"
                 }
             ]
         },
@@ -66,7 +60,7 @@
             "title": "Display Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/display"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/display"
                 }
             ]
         },
@@ -74,14 +68,14 @@
             "title": "Price Properties",
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/price"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/price"
                 }
             ]
         },
         "hotspots": {
             "allOf": [
                 {
-                    "$ref": "https://demostore.amplience.com/lib/stylitics#/definitions/hotspots"
+                    "$ref": "{{schemaBaseUri}}/lib/stylitics#/definitions/hotspots"
                 }
             ]
         }

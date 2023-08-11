@@ -16,7 +16,10 @@ const recursiveTemplateSearch = async (baseDir: string, targetDir: string, dir: 
         const isDir = (await promises.stat(fullPath)).isDirectory()
 
         if (isDir) {
-            await promises.mkdir(join(targetDir, filePath))
+            try {
+                await promises.mkdir(join(targetDir, filePath))
+            } catch (e) {}
+
             await recursiveTemplateSearch(baseDir, targetDir, filePath, fileFunc)
         } else {
             await fileFunc(filePath)
@@ -38,7 +41,7 @@ const compileTemplates = async (dir: string, targetDir: string, params: any) => 
             const newPath = join(targetDir, filePath.substring(0, filePath.length - ('.hbs'.length)))
 
             await promises.writeFile(newPath, result, {encoding: 'utf8'})
-        } else {
+        } else if (dir !== targetDir) {
             // Copy the file.
             await promises.copyFile(join(dir, filePath), join(targetDir, filePath))
         }
@@ -95,10 +98,22 @@ export const importArgs = (yargs: Argv) => {
             default: '',
             type: 'string'
         })
+        .option('schemaBaseUri', {
+            describe: 'mapFile',
+            default: 'https://demostore.amplience.com',
+            type: 'string'
+        })
         .option('url', {
             describe: 'production url',
             required: true,
             type: 'string'
+        })
+        .option('omitExtensionEcommToolkit', {
+            alias: 'o',
+            describe: 'Use a text field for SKU rather than the ecomm toolkit extension.',
+            required: false,
+            boolean: true,
+            type: 'boolean'
         })
 };
 
@@ -107,6 +122,7 @@ export const importHandler = async (context: Arguments<Context>): Promise<any> =
     
     console.log(`Compiling templates and copying files...`)
     await compileTemplates(context.automationDir, context.tempDir, context)
+
     const mappingFile = context.mapFile || join(process.env[process.platform == 'win32' ? 'USERPROFILE' : 'HOME'] || __dirname, '.amplience', 'imports', `stylitics-${context.hubId}.json`)
 
     try {
