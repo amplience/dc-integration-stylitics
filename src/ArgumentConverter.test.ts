@@ -114,7 +114,12 @@ describe('fromGeneric', function() {
                     viewDetailsCTA: 'More Details...',
                     itemLinkCTA: 'Shop!',
                     itemDetailsModalHeader: 'Details'
-                }
+                },
+                responsive: [
+                    { width: 0, columns: 1 },
+                    { width: 300, columns: 2 },
+                    { width: 600, columns: 3 }
+                ],
             },
             _meta: {
                 deliveryKey: 'stylitics/classic-example',
@@ -167,6 +172,11 @@ describe('fromGeneric', function() {
                 itemLinkCTA: 'Shop!',
                 itemDetailsModalHeader: 'Details'
             },
+            responsive: [
+                [0, { columns: 1 }],
+                [300, { columns: 2 }],
+                [600, { columns: 3 }]
+            ]
         } as WidgetInitArgs);
     });
 
@@ -213,7 +223,8 @@ describe('fromGeneric', function() {
                     viewDetailsCTA: 'Shop a look?',
                     itemLinkCTA: 'Buy',
                     itemDetailsModalHeader: 'Details'
-                }
+                },
+                responsive: []
             },
             _meta: {
                 deliveryKey: 'stylitics/hotspots-example',
@@ -306,7 +317,12 @@ describe('fromGeneric', function() {
                     viewDetailsCTA: 'Check this look',
                     itemLinkCTA: 'Buy it',
                     itemDetailsModalHeader: 'Details'
-                }
+                },
+                responsive: [
+                    { width: 0, columns: 1 },
+                    { width: 300, columns: 2 },
+                    { width: 600, columns: 3 }
+                ]
             },
             _meta: {
                 deliveryKey: 'stylitics/gallery-example',
@@ -350,7 +366,17 @@ describe('fromGeneric', function() {
                 viewDetailsCTA: 'Check this look',
                 itemLinkCTA: 'Buy it',
                 itemDetailsModalHeader: 'Details'
-            }
+            },
+            responsive: [
+                [0, { columns: 1 }],
+                [300, { columns: 2 }],
+                [600, { columns: 3 }]
+            ],
+            responsiveMobile: [
+                [0, { columns: 1 }],
+                [300, { columns: 2 }],
+                [600, { columns: 3 }]
+            ]
         } as WidgetInitArgs);
     });
 
@@ -456,6 +482,11 @@ describe('fromGeneric', function() {
                     itemLinkCTA: 'Shopping',
                     itemDetailsModalHeader: 'Details'
                 },
+                responsive: [
+                    { width: 0, columns: 1 },
+                    { width: 300, columns: 2 },
+                    { width: 600, columns: 3 }
+                ],
             },
             _meta: {
                 deliveryKey: 'stylitics/moodboard-example-2',
@@ -505,6 +536,11 @@ describe('fromGeneric', function() {
                 itemLinkCTA: 'Shopping',
                 itemDetailsModalHeader: 'Details'
             },
+            responsive: [
+                [0, { touchColumns: 1 }],
+                [300, { touchColumns: 2 }],
+                [600, { touchColumns: 3 }]
+            ]
         } as WidgetInitArgs);
     });
 

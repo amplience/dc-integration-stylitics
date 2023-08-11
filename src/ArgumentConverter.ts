@@ -20,8 +20,9 @@ export type WidgetInitArgs = WidgetExtras & WidgetArgs
  * Flattens view specific configuration into the base configuration.
  * @param base Base configuration object
  * @param type View specific configuration object
+ * @param view View type name
  */
-function flattenGenericType(base, type): void {
+function flattenGenericType(base, type, view: ArgumentContentType): void {
     if (type) {
         if (type.display) {
             base.display = {...base.display, ...type.display};
@@ -37,6 +38,20 @@ function flattenGenericType(base, type): void {
 
         if (type.api) {
             base.api = {...base.api, ...type.api}
+        }
+
+        if (type.responsive) {
+            if (type.responsive.length === 0) {
+                delete base.responsive;
+            } else {
+                base.responsive = type.responsive.map(entry => 
+                    [entry.width, view === 'moodboard' ? { touchColumns: entry.columns } : { columns: entry.columns }]
+                );
+
+                if (view === 'gallery') {
+                    base.responsiveMobile = base.responsive;
+                }
+            }
         }
     }
 }
@@ -71,7 +86,7 @@ export function fromGeneric(body: GenericWidgetContentItem<string>) : WidgetInit
 
     const type = body.hasOwnProperty(result.view) ? body[result.view] : undefined;
 
-    flattenGenericType(result, type);
+    flattenGenericType(result, type, result.view);
 
     flattenCommon(body, result);
 

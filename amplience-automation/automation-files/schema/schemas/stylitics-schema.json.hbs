@@ -366,6 +366,28 @@
             ]
         },
 
+        "responsive": {
+            "title": "Responsive Breakpoints",
+            "description": "Breakpoints for how many columns should appear for different page widths. When empty, uses defaults.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "width": {
+                        "title": "Minimum Width",
+                        "description": "",
+                        "type": "integer",
+                        "minimum": 0
+                    },
+                    "columns": {
+                        "title": "Columns",
+                        "type": "integer",
+                        "minimum": 1
+                    }
+                }
+            }
+        },
+
         "classic": {
             "title": "Classic Widget",
             "type": "object",
@@ -566,6 +588,13 @@
                             ]
                         }
                     }
+                },
+                "responsive": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/responsive"
+                        }
+                    ]
                 }
             }
         },
@@ -715,6 +744,13 @@
                             ]
                         }
                     }
+                },
+                "responsive": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/responsive"
+                        }
+                    ]
                 }
             }
         },
@@ -887,6 +923,13 @@
                             ]
                         }
                     }
+                },
+                "responsive": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/responsive"
+                        }
+                    ]
                 }
             }
         },
@@ -1045,6 +1088,13 @@
                             ]
                         }
                     }
+                },
+                "responsive": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/responsive"
+                        }
+                    ]
                 }
             }
         },
