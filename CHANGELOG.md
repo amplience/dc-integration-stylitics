@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.2.0](https://github.com/amplience/dc-integration-stylitics/compare/v0.1.2...v0.2.0) (2023-08-11)
+
+
+### Features
+
+* add html card, fix case where locale is not provided ([8fef32b](https://github.com/amplience/dc-integration-stylitics/commit/8fef32bd7810c41bd26bde75c5e2d6a2abf1e7d6))
+* add option to omit ecomm toolkit extension in schemas ([07e42d4](https://github.com/amplience/dc-integration-stylitics/commit/07e42d4054abcd8be6788e739a1bc2e543d71979))
+* add react vis to all types ([1b338e8](https://github.com/amplience/dc-integration-stylitics/commit/1b338e81884f3d418204fc5ae35e13e45dd61521))
+* add responsive breakpoints to schema ([6f6c22b](https://github.com/amplience/dc-integration-stylitics/commit/6f6c22bdb50a533404eedef9b4c006c51b3cd2c5))
+* added productListMnM to partial and in Classic and Gallery ([d9dbd14](https://github.com/amplience/dc-integration-stylitics/commit/d9dbd14da7dc85c98800c422aee1b444e544dc73))
+* update automation with html cards ([f305cdc](https://github.com/amplience/dc-integration-stylitics/commit/f305cdc8ea9af099cd95f3b995a255cd20f3742c))
+
+
+### Bug Fixes
+
+* add charset to html examples ([a3c16e6](https://github.com/amplience/dc-integration-stylitics/commit/a3c16e6af8ef53b748d1654ed45431ed5655ffd5))
+* Correct regex in templateChooser ([0e81609](https://github.com/amplience/dc-integration-stylitics/commit/0e816093d9a18ddfedb028ceac51da6deb2f6876))
+* Update URLs for HTML example and ordering of all parts ([2941bf6](https://github.com/amplience/dc-integration-stylitics/commit/2941bf6347d66987dc152d1f702f300658638d24))
+
 ## [0.1.2](https://github.com/amplience/dc-integration-stylitics/compare/v0.1.1...v0.1.2) (2023-08-02)
 
 
