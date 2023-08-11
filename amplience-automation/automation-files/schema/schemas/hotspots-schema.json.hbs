@@ -35,7 +35,7 @@
 		"sku": {
 			"title": "SKU",
 			"description": "The sku of the product to render",
-			"type": "string",
+            {{#unless omitExtensionEcommToolkit}}
             "ui:extension": {
                 "name": "ecomm-toolkit-stylitics",
                 "params": {
@@ -44,7 +44,9 @@
                     "data": "product",
                     "type": "string"
                 }
-            }
+            },
+            {{/unless}}
+			"type": "string"
 		},
 		"api": {
             "title": "API Properties",

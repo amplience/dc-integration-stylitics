@@ -74,10 +74,6 @@ The files in `Assets` are all icons used by the content types. They should be im
 
 The files in `Templates` are CRS templates that are used for simple visualizations and cards for the stylitics content types. These should also be imported and published in the content hub, though ideally in a different folder to make them easier to manage.
 
-The `stylitics-templateChooser.html.hbs` file relies on your specified `schemaBaseUri` from the previous step, so it's recommended to run that first, or replace `{{schemaBaseUri}}` with your a matching base uri manually to create `stylitics-templateChooser.html` yourself.
-
-After this, simply import and publish all the `.html` files, not the `.hbs` one.
-
 ## Development
 
 Node 18.x or later should be used to build the project.

@@ -32,6 +32,15 @@ export interface CommonWidgetProps {
     },
 }
 
+export type ResponsiveBreakpointsContent = {
+    width: number,
+    columns: number
+}[]
+
+export type ResponsiveBreakpoints = [
+    { columns?: number, touchColumns?: number }
+]
+
 export interface WidgetTextExtras<StringType> {
     viewDetailsCTA?: StringType,
     itemLinkCTA?: StringType,
@@ -71,10 +80,11 @@ export interface ClassicWidgetDisplay {
     dynamicLabelBackground: boolean
 }
 
-export interface ClassicWidgetProps<StringType> {
+export interface ClassicWidgetProps<StringType, BreakpointType> {
     display: ClassicWidgetDisplay,
     navigation: WidgetCustomizedNavigation,
-    text?: WidgetTextExtras<StringType>
+    text?: WidgetTextExtras<StringType>,
+    responsive?: BreakpointType
 }
 
 export type WidgetHotspotOverlayOrderContent = string[]; // As CSV
@@ -95,9 +105,10 @@ export interface HotspotWidgetDisplay<OverlayOrderType> {
     hotspotsOverlayOrder?: OverlayOrderType
 }
 
-export interface HotspotWidgetProps<StringType, OverlayOrderType> {
+export interface HotspotWidgetProps<StringType, OverlayOrderType, BreakpointType> {
     display: HotspotWidgetDisplay<OverlayOrderType>,
-    text?: WidgetTextExtras<StringType>
+    text?: WidgetTextExtras<StringType>,
+    responsive?: BreakpointType
 }
 
 export interface MoodboardWidgetDisplay {
@@ -115,10 +126,11 @@ export interface MoodboardWidgetDisplay {
     maxGridSize?: number
 }
 
-export interface MoodboardWidgetProps<StringType> {
+export interface MoodboardWidgetProps<StringType, BreakpointType> {
     display: MoodboardWidgetDisplay,
     navigation: WidgetCustomizedNavigation,
-    text?: WidgetTextMoodboardExtras<StringType>
+    text?: WidgetTextMoodboardExtras<StringType>,
+    responsive?: BreakpointType
 }
 
 export interface GalleryWidgetApi {
@@ -137,11 +149,19 @@ export interface GalleryWidgetDisplay {
     mobileGalleryLayout: boolean
 }
 
-export interface GalleryWidgetProps<StringType> {
+export interface GalleryWidgetProps<StringType, BreakpointType> {
     api?: GalleryWidgetApi,
     display: GalleryWidgetDisplay,
     navigation: WidgetCustomizedNavigation,
-    text?: WidgetTextExtras<StringType>
+    text?: WidgetTextExtras<StringType>,
+    responsive?: BreakpointType
 }
 
-export type WidgetArgs = CommonWidgetProps & (MainAndDetailWidgetProps | ClassicWidgetProps<string> | HotspotWidgetProps<string, WidgetHotspotOverlayOrderArgs> | MoodboardWidgetProps<string> | GalleryWidgetProps<string>);
+export type WidgetArgs = 
+    CommonWidgetProps & (
+        MainAndDetailWidgetProps |
+        ClassicWidgetProps<string, ResponsiveBreakpoints> |
+        HotspotWidgetProps<string, WidgetHotspotOverlayOrderArgs, ResponsiveBreakpoints> |
+        MoodboardWidgetProps<string, ResponsiveBreakpoints> |
+        GalleryWidgetProps<string, ResponsiveBreakpoints>
+    );
