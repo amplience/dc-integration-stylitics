@@ -16,3 +16,15 @@ Exact URLs used are listed in the table below:
 
 > Note: The Generic component loads the right widget as per its selected view type
 
+### I am seeing some funny characters in the HTML rendering of my widget
+
+The Stylitics widgets require the HTML page to have UTF-8 encoding enabled. Simply add the following to the `<head />` of your HTML.
+
+```html
+<meta charset="utf-8" />
+```
+For reference of how to do this you can see `examples/stylitics-generic-html.html`.
+
+### I do not have the Content Rendering service from Amplience - can i remove the default visualisations?
+
+Sure, simply remove the vizualisations for all of the content-types in `amplience-automation/automation-files/type`
