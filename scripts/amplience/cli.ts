@@ -9,8 +9,7 @@ export type Context = {
     clientId: string,
     clientSecret: string,
     contentRepoId: string,
-    mapFile: string,
-    url: string
+    mapFile: string
 }
 
 const configureYargs = (yargInstance: Argv): Promise<Arguments> => {
