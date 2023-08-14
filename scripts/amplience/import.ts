@@ -103,11 +103,6 @@ export const importArgs = (yargs: Argv) => {
             default: 'https://demostore.amplience.com',
             type: 'string'
         })
-        .option('url', {
-            describe: 'production url',
-            required: true,
-            type: 'string'
-        })
         .option('omitExtensionEcommToolkit', {
             alias: 'o',
             describe: 'Use a text field for SKU rather than the ecomm toolkit extension.',
