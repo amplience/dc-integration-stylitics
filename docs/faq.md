@@ -27,4 +27,4 @@ For reference of how to do this you can see `examples/stylitics-generic-html.htm
 
 ### I do not have the Content Rendering service from Amplience - can i remove the default visualisations?
 
-Sure, simply remove the vizualisations for all of the content-types in `amplience-automation/automation-files/type`
+Sure, simply remove the visualisations for all of the content-types in `amplience-automation/automation-files/type`
