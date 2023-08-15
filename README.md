@@ -121,7 +121,7 @@ You can run these with `npm run test`.
 ## 🌍 Useful Links
 
 - [FAQ](./docs/faq.md)
-- [ChangeLog](./CHANGELOG.md) 
+- [Changelog](./CHANGELOG.md) 
 - [Contributing](./CONTRIBUTING.md)
 - [Support](./support.md)
 - [Licensing](./LICENSE)
