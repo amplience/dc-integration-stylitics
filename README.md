@@ -83,6 +83,8 @@ The files in `amplience-automation/media` are images for card icons, and CRS tem
 
 The files in `Assets` are all icons used by the content types. They should be imported and published directly in your Content Hub.
 
+![Cards](./docs/media/stylitics-cards.png)
+
 The files in `Templates` are CRS templates that are used for simple visualizations and cards for the stylitics content types. These should also be imported and published in the content hub, though ideally in a different folder to make them easier to manage.
 
 ## Development
