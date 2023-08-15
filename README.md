@@ -1,6 +1,18 @@
 # @amplience/dc-integration-stylitics
 
+TODO: Screenshot of stylitics
+
+
+
 A library for managing stylitics widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of content types and schemas you can install to make integrating Stylitics with Amplience considerably easier.
+
+## ⚙️ Features
+- Feature 1
+- feature
+- ...
+
+## 🏁 Quickstart
+TODO: Refactor for quickstart
 
 - `fromContentItem`: Convert from a content item containing Stylitics widget configuration into arguments you can provide to create the widget.
 - `createWidget`: Create a stylitics widget with a given set of arguments, including view type and account. Automatically loads necessary scripts for the view type asynchronously, and keeps them loaded for future requests.
@@ -103,3 +115,11 @@ This builds the project in a variety of configurations:
 The project includes some simple unit tests to ensure that all possibilies with the argument conversion and widget loader are working as intended.
 
 You can run these with `npm run test`.
+
+## 🌍 Useful Links
+
+- [FAQ](./docs/faq.md)
+- [ChangeLog](./CHANGELOG.md) 
+- [Contributing](./CONTRIBUTING.md)
+- [Support](./support.md)
+- [Licensing](./LICENSE)
