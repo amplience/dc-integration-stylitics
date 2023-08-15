@@ -1,6 +1,6 @@
 # @amplience/dc-integration-stylitics
 
-![Stylitics Wdigets)](./docs/media/stylitics-main.png)
+![Stylitics Widgets)](./docs/media/stylitics-main.png)
 
 A library for managing Stylitics widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of content types and schemas you can install to make integrating Stylitics with Amplience considerably easier.
 
@@ -115,6 +115,8 @@ This builds the project in a variety of configurations:
 The project includes some simple unit tests to ensure that all possibilies with the argument conversion and widget loader are working as intended.
 
 You can run these with `npm run test`.
+
+![Stylitics tests)](./docs/media/stylitics-tests.png)
 
 ## 🌍 Useful Links
 
