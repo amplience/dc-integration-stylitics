@@ -20,7 +20,7 @@ In order for this automation to work, you must have the following:
 
 ## Other assumptions
 
-## Default Repository
+### Default Repository
 The automation assumes that you have a repository in your Dynamic Content hub with a 'name' of `content`. This is default in most account setups.
 
 If you have a different setup, or would like to apply this to multiple repositories simply do the following before running any automation:
