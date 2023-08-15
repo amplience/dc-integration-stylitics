@@ -25,6 +25,6 @@ The Stylitics widgets require the HTML page to have UTF-8 encoding enabled. Simp
 ```
 For reference of how to do this you can see `examples/stylitics-generic-html.html`.
 
-### I do not have the Content Rendering service from Amplience - can i remove the default visualisations?
+### I do not have the Content Rendering service from Amplience - can I remove the default visualisations?
 
 Sure, simply remove the visualisations for all of the content-types in `amplience-automation/automation-files/type`
