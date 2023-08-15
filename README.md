@@ -67,6 +67,8 @@ Included in the automation folder are types and example content you can install 
 
 ### Import schemas, types and example content into Dynamic Content
 
+![Dynamic Content)](./docs/media/stylitics-content-types.png)
+
 The files in `amplience-automation/automation-files` are content types and content type schemas that allow you to configure a Stylitics widget using Amplience content items. Also included are example content items that demonstrate how they can be used.
 
 The easiest way to import these is through a script included with the project. Use `npm run import` to obtain a list of arguments, and provide them like `npm run import -- --clientId a --clientSecret b --hubId c` to import to a specific hub. One of the options you can provide, `schemaBaseUri`, determines what base URI is used for the schema IDs being imported. If not provided, this will default to `https://demostore.amplience.com/`.
@@ -74,6 +76,8 @@ The easiest way to import these is through a script included with the project. U
 The content types created in this step will rely on assets imported in the next for the cards and visualization to work, though this step should still be performed first.
 
 ### Import media and templates into Content Hub
+
+![Dynamic Content)](./docs/media/stylitics-crs-viz.png)
 
 The files in `amplience-automation/media` are images for card icons, and CRS templates for visualization and live card previews in Dynamic Content. They also serve as a good example of how the content item can be used to create a stylitics widget with this library.
 
