@@ -1,7 +1,7 @@
 # FAQ
-This page lists commonly asked questions for implementation
+This page lists commonly asked questions for implementation.
 
-### What versions of the stylitics widgets does the integration load
+### What versions of the Stylitics Widgets does the integration load
 This implementation loads widgets from the `latest` release from Stylitics of their `v3` widgets.
 
 Exact URLs used are listed in the table below:
@@ -25,6 +25,6 @@ The Stylitics widgets require the HTML page to have UTF-8 encoding enabled. Simp
 ```
 For reference of how to do this you can see `examples/stylitics-generic-html.html`.
 
-### I do not have the Content Rendering service from Amplience - can I remove the default visualisations?
+### I do not have the Content Rendering Service from Amplience - can I remove the default visualisations?
 
-Sure, simply remove the visualisations for all of the content-types in `amplience-automation/automation-files/type`
+Sure, simply remove the visualisations for all of the Content Types in `amplience-automation/automation-files/type`.

@@ -2,13 +2,13 @@
 
 ![Stylitics Widgets)](./docs/media/stylitics-main.png)
 
-A library for managing Stylitics widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of content types and schemas you can install to make integrating Stylitics with Amplience considerably easier.
+A library for managing Stylitics Widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of Content Types and Schemas you can install to make integrating Stylitics with Amplience considerably easier.
 
 ## ⚙️ Features
 - Convert Content Item into Stylitics arguments
 - Automatically create Stylitics Widget
-- Import schemas, types, samples items in a Dynamic Content Hub
-- Use provided templates for Content Rendering Service visualisation and cards
+- Import Schemas, Content Types, samples Content Items in a Dynamic Content hub
+- Use provided Templates for Content Rendering Service visualisation and cards
 
 ## 🏁 Quickstart
 
@@ -79,11 +79,12 @@ In the `/examples` folder you will see an implementation with the following file
 HTML Example: `examples/stylitics-generic-html.html`
 JS used to fetch content / visualisation: `examples/stylitics-widget.js`
 
+
 ## 🌍 Useful Links
 - [Automation](./docs/automation.md)
 - [Developing and Building Locally](./docs/developing+building+locally.md)
 - [FAQ](./docs/faq.md)
-- [ChangeLog](./CHANGELOG.md) 
+- [Changelog](./CHANGELOG.md) 
 - [Contributing](./CONTRIBUTING.md)
 - [Support](./support.md)
 - [Licensing](./LICENSE)
