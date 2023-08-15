@@ -2,13 +2,13 @@
 
 ![Stylitics Widgets)](./docs/media/stylitics-main.png)
 
-A library for managing Stylitics widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of content types and schemas you can install to make integrating Stylitics with Amplience considerably easier.
+A library for managing Stylitics Widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of Content Types and Schemas you can install to make integrating Stylitics with Amplience considerably easier.
 
 ## ⚙️ Features
 - Convert Content Item into Stylitics arguments
 - Automatically create Stylitics Widget
-- Import schemas, types, samples items in a Dynamic Content hub
-- Use provided templates for Content Rendering Service visualisation and cards
+- Import Schemas, Content Types, samples Content Items in a Dynamic Content hub
+- Use provided Templates for Content Rendering Service visualisation and cards
 
 ## Dependency versions
 
@@ -91,13 +91,13 @@ The content types created in this step will rely on assets imported in the next 
 
 ![Dynamic Content)](./docs/media/stylitics-crs-viz.png)
 
-The files in `amplience-automation/media` are images for card icons, and Content Rendering Service (CRS) templates for visualization and live card previews in Dynamic Content. They also serve as a good example of how the content item can be used to create a stylitics widget with this library.
+The files in `amplience-automation/media` are images for card icons, and Content Rendering Service (CRS) Templates for visualisation and live card previews in Dynamic Content. They also serve as a good example of how the content item can be used to create a stylitics widget with this library.
 
 The files in `Assets` are all icons used by the content types. They should be imported and published directly in your Content Hub.
 
 ![Cards](./docs/media/stylitics-cards.png)
 
-The files in `Templates` are CRS templates that are used for simple visualizations and cards for the stylitics content types. These should also be imported and published in the content hub, though ideally in a different folder to make them easier to manage.
+The files in `Templates` are CRS Templates that are used for simple visualizations and cards for the Stylitics content types. These should also be imported and published in the Content Hub, though ideally in a different folder to make them easier to manage.
 
 ## Development
 
