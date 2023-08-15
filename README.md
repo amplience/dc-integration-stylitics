@@ -85,7 +85,7 @@ The files in `amplience-automation/automation-files` are content types and conte
 
 The easiest way to import these is through a script included with the project. Use `npm run import` to obtain a list of arguments, and provide them like `npm run import -- --clientId a --clientSecret b --hubId c` to import to a specific hub. One of the options you can provide, `schemaBaseUri`, determines what base URI is used for the schema IDs being imported. If not provided, this will default to `https://demostore.amplience.com/`.
 
-The content types created in this step will rely on assets imported in the next for the cards and visualization to work, though this step should still be performed first.
+The content types created in this step will rely on assets imported in the next for the cards and visualisation to work, though this step should still be performed first.
 
 ### Import media and templates into Content Hub
 
@@ -97,7 +97,7 @@ The files in `Assets` are all icons used by the content types. They should be im
 
 ![Cards](./docs/media/stylitics-cards.png)
 
-The files in `Templates` are CRS Templates that are used for simple visualizations and cards for the Stylitics content types. These should also be imported and published in the Content Hub, though ideally in a different folder to make them easier to manage.
+The files in `Templates` are CRS Templates that are used for simple visualisations and cards for the Stylitics content types. These should also be imported and published in the Content Hub, though ideally in a different folder to make them easier to manage.
 
 ## Development
 
