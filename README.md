@@ -1,8 +1,6 @@
 # @amplience/dc-integration-stylitics
 
-TODO: Screenshot of Stylitics
-
-
+![Stylitics Wdigets)](./docs/media/stylitics-main.png)
 
 A library for managing Stylitics widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of content types and schemas you can install to make integrating Stylitics with Amplience considerably easier.
 
