@@ -24,7 +24,7 @@ To use the library, you will just need the two following methods:
 - `fromContentItem`: Convert from a content item containing Stylitics widget configuration into arguments you can provide to create the widget.
 - `createWidget`: Create a stylitics widget with a given set of arguments, including view type and account. Automatically loads necessary scripts for the view type asynchronously, and keeps them loaded for future requests.
 
-## Usage
+### Usage
 
 Install the package from NPM:
 
