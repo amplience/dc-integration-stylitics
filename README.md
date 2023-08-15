@@ -5,6 +5,13 @@ A library for managing stylitics widgets within modern web frameworks, configuri
 - `fromContentItem`: Convert from a content item containing Stylitics widget configuration into arguments you can provide to create the widget.
 - `createWidget`: Create a stylitics widget with a given set of arguments, including view type and account. Automatically loads necessary scripts for the view type asynchronously, and keeps them loaded for future requests.
 
+## Dependency versions
+
+This demo appliction was developed and tested with:
+
+- Node version 18.x
+- NPM version 9.x
+
 ## Usage
 
 Install the package from NPM:
