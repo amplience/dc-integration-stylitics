@@ -88,8 +88,8 @@ Node 18.x or later should be used to build the project.
 `npm run build`
 
 This builds the project in a variety of configurations:
-- `main`: es6/commonjs target.
-- `module`: esnext target.
+- `build/main`: es6/commonjs target.
+- `build/module`: esnext target.
 - `dist`: Webpack distributions meant for loading in the browser. These load the module into the global scope as `ampStylitics`.
 
 ## Unit tests
