@@ -101,9 +101,9 @@ These are iframed HTML sources loaded when editing content to see the result of 
 
 ### Account
 
-This automation comes with a dropdown and selector for some demo accounts from stylitics to get you up and running fast and test a technical implementation and rendering in your application.
+This automation comes with a dropdown and selector for some demo accounts from Stylitics to get you up and running fast and test a technical implementation and rendering in your application.
 
-If you are a stylitics customer, will have different account(s) that you are using.
+If you are a Stylitics customer, will have different account(s) that you are using.
 
 If you have already automated in you can either re-automate with changes, or simply change in the Amplience Dynamic Content UI.
 
@@ -130,9 +130,9 @@ You will see a JSON object called 'account' which has the following content:
 }
 ```
 
-Simply ammend to the accounts in use for your stylitics implementation. You can remove the default value or choose one that applies to you and save.
+Simply ammend to the accounts in use for your Stylitics implementation. You can remove the default value or choose one that applies to you and save.
 
-In order for this to change to take effect, you will have to also sync your stylitics content-types.
+In order for this to change to take effect, you will have to also sync your Stylitics content-types.
 
 >Note: If you would prefer this as a text field to input rather than a list to select from you can change to the example below. We would recommend a selection list to minimise user error:
 
