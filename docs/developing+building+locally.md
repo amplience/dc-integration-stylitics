@@ -50,4 +50,4 @@ The project includes some simple unit tests to ensure that all possibilities wit
 
 You can run these with `npm run test`.
 
-![Stylitics tests)](./docs/media/stylitics-tests.png)
+![Stylitics tests)](../docs/media/stylitics-tests.png)
