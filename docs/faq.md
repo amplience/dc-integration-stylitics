@@ -18,7 +18,7 @@ Exact URLs used are listed in the table below:
 
 ### I am seeing some funny characters in the HTML rendering of my widget
 
-The Stylitics widgets require the HTML page to have UTF-8 encoding enabled. Simply add the following to the `<head />` of your HTML.
+The Stylitics widgets require the HTML page to have UTF-8 encoding enabled. Simply add the following to the `<head>` tag of your HTML.
 
 ```html
 <meta charset="utf-8" />

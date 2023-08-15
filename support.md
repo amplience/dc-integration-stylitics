@@ -34,7 +34,7 @@ Should you want to host files on your own HTTPS hosting environments, please fee
 We recommend that you watch this repository so that you can be notified of updates and releases.
 
 ## Customisations
-We expect customers to ammend their configurations to point to Stylitics specific accounts and products.
+We expect customers to amend their configurations to point to Stylitics specific accounts and products.
 
 There are also integrations in the your front end application which you would adopt as a normal Stylitics integration which may include but would not be limited to:
 

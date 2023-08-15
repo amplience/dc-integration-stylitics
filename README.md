@@ -6,13 +6,13 @@ A library for managing Stylitics Widgets within modern web frameworks, configuri
 
 ## ⚙️ Features
 - Convert Content Item into Stylitics arguments
-- Automatically create Stylitics Widget
-- Import Schemas, Content Types, samples Content Items in a Dynamic Content hub
+- Automatically create Stylitics Widgets
+- Import Schemas, Content Types, sample Content Items into a Dynamic Content hub
 - Use provided Templates for Content Rendering Service visualisation and cards
 
 ## 🏁 Quickstart
 
-Setting up the Stylitics integration library is a simple import or include of the integration.
+Using the Stylitics integration library requires a simple import from NPM or linking a prebuilt js file.
 
 Once imported, the following two methods can be used:
 
@@ -21,7 +21,7 @@ Once imported, the following two methods can be used:
 
 These can be used regardless of implementation type (NodeJS project, Simple HTML/JS/CSS project or even using the Amplience Content Rendering Service)
 
-The examples below show how your would use in each implementation type. We would recommend using the [Amplience DC Delivery SDK](https://github.com/amplience/dc-delivery-sdk-js) to fetch your content
+The examples below show how you would use in each implementation type. We would recommend using the [Amplience DC Delivery SDK](https://github.com/amplience/dc-delivery-sdk-js) to fetch your content
 
 ### NodeJS Usage Example
 

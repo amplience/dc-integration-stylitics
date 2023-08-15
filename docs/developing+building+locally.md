@@ -23,7 +23,7 @@ This builds the project in a variety of configurations:
 ## Changing code
 
 All files for the integration are in the `/src` folder.
-Once completed with your changes, you will need to run `npm run build` for these changes to be compiled
+Once your changes are completed, you will need to run `npm run build` for these changes to be compiled.
 
 ## Hosting your JS integration files
 
@@ -35,9 +35,9 @@ You should host on a HTTPS location that can deal with the demands of requests t
 
 ## Referencing a customised integration in NodeJS projects
 
-You can follow standard principles to either load from a local project or direct from your own personal GIT fork.
+You can follow standard principles to either load from a local directory or direct from your own personal Git fork.
 
-### GIT
+### Git
 Current dependency in package.json:
 `"@amplience/dc-integration-stylitics": "^1.0.0",`
 
