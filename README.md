@@ -8,7 +8,7 @@ A library for managing Stylitics widgets within modern web frameworks, configuri
 - Convert Content Item into Stylitics arguments
 - Automatically create Stylitics Widget
 - Import schemas, types, samples items in a Dynamic Content hub
-- Templates for Content Rendering Service visualisation and cards
+- Use provided templates for Content Rendering Service visualisation and cards
 
 ## Dependency versions
 
