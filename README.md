@@ -1,21 +1,16 @@
 # @amplience/dc-integration-stylitics
 
-TODO: Screenshot of stylitics
+TODO: Screenshot of Stylitics
 
 
 
-A library for managing stylitics widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of content types and schemas you can install to make integrating Stylitics with Amplience considerably easier.
+A library for managing Stylitics widgets within modern web frameworks, configuring them with content items from Amplience, as well as a collection of content types and schemas you can install to make integrating Stylitics with Amplience considerably easier.
 
 ## ⚙️ Features
-- Feature 1
-- feature
-- ...
-
-## 🏁 Quickstart
-TODO: Refactor for quickstart
-
-- `fromContentItem`: Convert from a content item containing Stylitics widget configuration into arguments you can provide to create the widget.
-- `createWidget`: Create a stylitics widget with a given set of arguments, including view type and account. Automatically loads necessary scripts for the view type asynchronously, and keeps them loaded for future requests.
+- Convert Content Item into Stylitics arguments
+- Automatically create Stylitics Widget
+- Import schemas, types, samples items in a Dynamic Content hub
+- Templates for Content Rendering Service visualisation and cards
 
 ## Dependency versions
 
@@ -23,6 +18,13 @@ This demo appliction was developed and tested with:
 
 - Node version 18.x
 - NPM version 9.x
+
+## 🏁 Quickstart
+
+To use the library, you will just need the two following methods:
+
+- `fromContentItem`: Convert from a content item containing Stylitics widget configuration into arguments you can provide to create the widget.
+- `createWidget`: Create a stylitics widget with a given set of arguments, including view type and account. Automatically loads necessary scripts for the view type asynchronously, and keeps them loaded for future requests.
 
 ## Usage
 
@@ -91,7 +93,7 @@ The content types created in this step will rely on assets imported in the next 
 
 ![Dynamic Content)](./docs/media/stylitics-crs-viz.png)
 
-The files in `amplience-automation/media` are images for card icons, and CRS templates for visualization and live card previews in Dynamic Content. They also serve as a good example of how the content item can be used to create a stylitics widget with this library.
+The files in `amplience-automation/media` are images for card icons, and Content Rendering Service (CRS) templates for visualization and live card previews in Dynamic Content. They also serve as a good example of how the content item can be used to create a stylitics widget with this library.
 
 The files in `Assets` are all icons used by the content types. They should be imported and published directly in your Content Hub.
 
