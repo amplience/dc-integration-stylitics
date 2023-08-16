@@ -100,7 +100,7 @@ When using for your implementation it is likely that you will want to amend thes
 
 ![Stylitics Content Types)](../docs/media/stylitics-content-types.png)
 
-The files in `Assets` are all icons used by the content types. You can change your icon URL to be any HTTOS URL to an image of your choice. Feel free to use these as a basis.
+The files in `Assets` are all icons used by the content types. You can change your icon URL to be any HTTPS URL to an image of your choice. Feel free to use these as a basis.
 
 More information here: [Icons documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#choosing-an-icon).
 
