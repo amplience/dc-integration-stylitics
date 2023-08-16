@@ -91,10 +91,10 @@ The automation comes with default icons, cards and visualisations. These are sta
 
 When using for your implementation it is likely that you will want to amend these to point to your application. You can amend directly in each content-type in the Amplience Dynamic Content UI after importing, or amend in the automation before importing.
 
-1. Browse to `amplience-automation/automation-files/type`
-2. Open up all of the `*.hbs` files
+1. Browse to `amplience-automation/automation-files/type`.
+2. Open up all of the `*.hbs` files.
 3. Depending on what you would like to change, see the attributes [`icons`](#customising-icons), [`cards`](#customising-cards) or [`visualisations`](#customising-visualisations) object and amend as appropriate.
-4. Save the files and run the automation
+4. Save the files and run the automation.
 
 #### Customising Icons
 
