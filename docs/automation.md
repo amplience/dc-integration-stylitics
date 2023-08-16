@@ -102,13 +102,13 @@ When using for your implementation it is likely that you will want to amend thes
 
 The files in `Assets` are all icons used by the content types. You can change to be any https url to an image of your choice. Feel free to use these as a basis.
 
-[Icons documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#choosing-an-icon)
+More information here: [Icons documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#choosing-an-icon).
 
 #### Customising Cards
 
 These are iframed HTML pages which provide a preview of the content when selecting from the library view.
 
-[Cards documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#configuring-a-card)
+More information here: [Cards documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#configuring-a-card).
 
 ![Stylitics cards)](../docs/media/stylitics-cards.png)
 
@@ -117,7 +117,7 @@ These are iframed HTML pages which provide a preview of the content when selecti
 
 These are iframed HTML pages displayed alongside the Amplience content editor to see the result of your content edits as you make them.
 
-[Visualisations documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#setting-up-visualizations)
+More information here: [Visualisations documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#setting-up-visualizations)
 
 ![Visualisations)](../docs/media/stylitics-crs-viz.png)
 
