@@ -18,7 +18,7 @@ Exact URLs used are listed in the table below:
 
 ### I would like to limit the configuration for my business teams
 
-This example provides all configuration options as it is easier to remove rather than to add. In order to make life easier we have added all of these to a re-usable [partial](https://amplience.com/developers/docs/schema-reference/schema-examples/partials/simple-partial/) which can be found here:
+This example provides all configuration options as it is easier to remove rather than to add. In order to make life easier we have added all of these to a [re-usable partial](https://amplience.com/developers/docs/schema-reference/schema-examples/partials/simple-partial/) which can be found here:
 
 `amplience-automation/automation-files/schema/schemas/stylitics-schema.json.hbs`
 
@@ -32,14 +32,29 @@ For everything else you are free to remove from each item. The recommended manne
 As an example, if you wanted to remove the option to configure the bundle counter display from the gallery widget, then you would find this in the `gallery` and remove it:
 
 ```json
-"bundleCounter": {
-        "title": "Bundle Counter Visibility (with MnM)",
-        "allOf": [
-            {
-                "$ref": "#/definitions/bundleCounter"
+"gallery": {
+    "title": "Gallery Widget",
+    "type": "object",
+    "properties": {
+        ...
+         "display": {
+            "title": "Display Properties",
+            "type": "object",
+            "properties": {
+                ...
+                "bundleCounter": {
+                    "title": "Bundle Counter Visibility (with MnM)",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/bundleCounter"
+                        }
+                    ]
+                },
+                ...
             }
-        ]
-    },
+        ...
+    }
+}
 ```
 
 ### I am seeing some funny characters in the HTML rendering of my widget
