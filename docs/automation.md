@@ -49,6 +49,10 @@ The files in `amplience-automation/automation-files` are content types and conte
 
 The easiest way to import these is through a script included with the project. Use `npm run import` to obtain a list of arguments, and provide them like `npm run import -- --clientId a --clientSecret b --hubId c` to import to a specific hub.
 
+## Automation options
+
+Here is a list of arguments when running `npm run import`:
+
 ```
 Import Content
 
@@ -68,8 +72,6 @@ Options:
   -o, --omitExtensionEcommToolkit  Use a text field for SKU rather than the
                                    ecomm toolkit extension.            [boolean]
 ```
-
-## Automation options
 
 These additional options are not mandatory but may be useful:
 
