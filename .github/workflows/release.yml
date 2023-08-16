@@ -15,7 +15,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
           package-name: '@amplience/dc-integration-stylitics'
-          release-as: 1.0.0
 
       - uses: actions/checkout@v3
         if: ${{ steps.release.outputs.release_created }}
