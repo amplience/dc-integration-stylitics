@@ -1,6 +1,8 @@
 # Support
 
-This integration is built as open source which you are free to use and customise for your implementation. Amplience supports this integration for the expected behaviour and roles between the 3 key parts of the integration:
+This is an open source integration which you are free to use and customise for your implementation. Amplience supports this integration for the expected behaviour in the project documentation.
+
+The roles between the three key parts of the integration can be summarised as:
 
 1. Amplience Platform
 2. Stylitics Platform

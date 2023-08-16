@@ -125,7 +125,7 @@ More information here: [Visualisations documentation](https://amplience.com/deve
 
 This automation comes with a dropdown and selector for some demo accounts from Stylitics for quick prototyping that lets you test a technical implementation and rendering in your application.
 
-If you are a Stylitics customer, will have different account(s) that you are using.
+If you are a Stylitics customer, you'll want your own set of accounts to be choices on the content form.
 
 If you have already automated in you can either re-automate with changes, or simply change in the Amplience Dynamic Content UI.
 
