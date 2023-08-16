@@ -49,7 +49,7 @@ widget.start();
 
 Similar to using the Stylitics widget manually, you can set overrides before starting the widget, refresh it with new arguments, or `destroy()` it when finished.
 
-### Usage HTML / JS / CSS
+### Usage HTML / JavaScript / CSS
 For projects that don't use node, you can import a pre-packaged script that places the module in the global scope as `ampStylitics`:
 
 ```html
