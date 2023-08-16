@@ -87,7 +87,7 @@ Once you've run the automation, your account will be populated with content sche
 
 ### Icons, Cards & Visualisations
 
-The automation comes with default icons, cards and visualisations. These are stand-alone examples to enable you to see get started quickly.
+The automation comes with default icons, cards and visualisations. These are stand-alone examples to enable you to get started quickly.
 
 When using for your implementation it is likely that you will want to amend these to point to your application. You can amend directly in each content-type in the Amplience Dynamic Content UI after importing, or amend in the automation before importing.
 
@@ -100,7 +100,7 @@ When using for your implementation it is likely that you will want to amend thes
 
 ![Stylitics Content Types)](../docs/media/stylitics-content-types.png)
 
-The files in `Assets` are all icons used by the content types. You can change to be any https url to an image of your choice. Feel free to use these as a basis.
+The files in `Assets` are all icons used by the content types. You can change your icon URL to be any HTTOS URL to an image of your choice. Feel free to use these as a basis.
 
 More information here: [Icons documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#choosing-an-icon).
 
@@ -154,7 +154,7 @@ You will see a JSON object called 'account' which has the following content:
 
 Simply replace these with the accounts in use for your Stylitics implementation. You can remove the default value or choose one that applies to you and save.
 
-In order for this to change to take effect, you will have to also sync your Stylitics content-types.
+In order for this change to take effect, you will also have to sync your Stylitics content-types.
 
 >Note: If you would prefer this as a text field to input rather than a list to select from you can change to the example below. We would recommend a selection list to minimise user error:
 
