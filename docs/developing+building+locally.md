@@ -13,6 +13,7 @@ This demo appliction was developed and tested with:
 
 ## Building
 
+`npm i`
 `npm run build`
 
 This builds the project in a variety of configurations:
