@@ -5,6 +5,7 @@ Included in the automation folder are types and example content you can install 
 Functionality of the automation includes:
  - Content Type Schemas
  - Content Types
+ - Extensions (eComm Toolkit, Help)
  - Sample Content for demo accounts and demo SKUs from Stylitics
  - Default Icons
  - Default Cards
@@ -48,6 +49,26 @@ The files in `amplience-automation/automation-files` are content types and conte
 
 The easiest way to import these is through a script included with the project. Use `npm run import` to obtain a list of arguments, and provide them like `npm run import -- --clientId a --clientSecret b --hubId c` to import to a specific hub.
 
+```
+Import Content
+
+Options:
+      --help                       Show help                           [boolean]
+      --version                    Show version number                 [boolean]
+  -a, --automationDir              automation files directory
+                   [string] [default: "./amplience-automation/automation-files"]
+  -t, --tempDir                    temporary directory for all run files
+      --hubId                      amplience hub id          [string] [required]
+      --clientId                   amplience client id       [string] [required]
+      --clientSecret               amplience client secret   [string] [required]
+      --contentRepoId              content repository id     [string] [required]
+      --mapFile                    mapFile                [string] [default: ""]
+      --schemaBaseUri              mapFile
+                           [string] [default: "https://demostore.amplience.com"]
+  -o, --omitExtensionEcommToolkit  Use a text field for SKU rather than the
+                                   ecomm toolkit extension.            [boolean]
+```
+
 ## Automation options
 
 These additional options are not mandatory but may be useful:
@@ -59,7 +80,6 @@ These additional options are not mandatory but may be useful:
 
 ## Automation result
 Once you've run the automation, your account will be populated with content schemas, content types, dependant extensions, cards, icons and visualisations all pointing to default Stylitics accounts.
-
 
 ## Customisations & Implementation
 
