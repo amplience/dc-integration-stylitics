@@ -77,7 +77,7 @@ These additional options are not mandatory but may be useful:
 
 |Option|Alias|Meaning|
 |:----|:----|:----|
-|`--schemaBaseUri`| |determines what base URI is used for the schema IDs being imported. If not provided, this will default to `https://demostore.amplience.com`.|
+|`--schemaBaseUri`| |determines what base URI is used for the schema IDs being imported. If not provided, this will default to `https://demostore.amplience.com`|
 |`--omitExtensionEcommToolkit`|`-o`|Will automate your schemas without the eComm Toolkit extension so that you can manually type product references instead of browsing and selecting|
 
 ## Automation result
