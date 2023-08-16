@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0](https://github.com/amplience/dc-integration-stylitics/compare/v0.2.0...v1.0.0) (2023-08-16)
+
+
+### Features
+
+* release 1.0.0 ([2916e4f](https://github.com/amplience/dc-integration-stylitics/commit/2916e4f232fef88543a89b517057e23ea2daff04))
+
 ## [0.2.0](https://github.com/amplience/dc-integration-stylitics/compare/v0.1.2...v0.2.0) (2023-08-11)
 
 
