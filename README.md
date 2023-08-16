@@ -77,6 +77,7 @@ For projects that don't use node, you can import a pre-packaged script that plac
 In the `/examples` folder you will see an implementation with the following files that includes fetching an item, instantiating the widget and support for real-time visualisation:
 
 HTML Example: `examples/stylitics-generic-html.html`
+
 JS used to fetch content / visualisation: `examples/stylitics-widget.js`
 
 
