@@ -78,7 +78,7 @@ In the `/examples` folder you will see an implementation with the following file
 
 HTML Example: `examples/stylitics-generic-html.html`
 
-JS used to fetch content / visualisation: `examples/stylitics-widget.js`
+JavaScript used to fetch content / visualisation: `examples/stylitics-widget.js`
 
 
 ## 🌍 Useful Links
