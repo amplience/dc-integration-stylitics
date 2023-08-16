@@ -117,7 +117,7 @@ More information here: [Cards documentation](https://amplience.com/developers/do
 
 These are iframed HTML pages displayed alongside the Amplience content editor to see the result of your content edits as you make them.
 
-More information here: [Visualisations documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#setting-up-visualizations)
+More information here: [Visualisations documentation](https://amplience.com/developers/docs/dev-tools/guides-tutorials/content-types/#setting-up-visualizations).
 
 ![Visualisations)](../docs/media/stylitics-crs-viz.png)
 
