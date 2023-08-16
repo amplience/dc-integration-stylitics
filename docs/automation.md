@@ -17,7 +17,7 @@ Details for what is required to automate into your Amplience account as well as 
 ## Mandatory
 In order for this automation to work, you must have the following:
 - An Amplience Dynamic Content Account.
-- A valid API key (`clientId` & `clientSecret`) for this hub with a minimum of a 'Developer' [role](https://amplience.com/developers/docs/concepts/permissions/roles/)
+- A valid API key (`clientId` & `clientSecret`) for this hub with a minimum of a [Developer role](https://amplience.com/developers/docs/concepts/permissions/roles/#developer)
 - Your Amplience Dynamic Content `hubId` to import into
 
 ## Other assumptions
