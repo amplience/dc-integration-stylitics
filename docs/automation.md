@@ -20,6 +20,7 @@ In order for this automation to work, you must have the following:
 - An Amplience Dynamic Content Account.
 - A valid API key (`clientId` & `clientSecret`) for this hub with a minimum of a [Developer role](https://amplience.com/developers/docs/concepts/permissions/roles/#developer)
 - Your Amplience Dynamic Content `hubId` to import into
+- Your Amplience Dynamic Content `contentRepoId` to import into
 
 ## Other assumptions
 
@@ -47,7 +48,9 @@ If you have a different setup, or would like to apply this to multiple repositor
 ## Running the automation
 The files in `amplience-automation/automation-files` are content types and content type schemas that allow you to configure a Stylitics widget using Amplience content items. The folder also includes example content items that demonstrate how they can be used.
 
-The easiest way to import these is through a script included with the project. Use `npm run import` to obtain a list of arguments, and provide them like `npm run import -- --clientId a --clientSecret b --hubId c` to import to a specific hub.
+Firstly install the project dependencies ensuring that you are node version `18.x` first and then running `npm i`
+
+The easiest way to import these is through a script included with the project. Use `npm run import` to obtain a list of arguments, and provide them like `npm run import -- --clientId a --clientSecret b --hubId c --contentRepoId d` to import to a specific hub.
 
 ## Automation options
 
