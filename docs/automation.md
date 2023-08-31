@@ -48,7 +48,7 @@ If you have a different setup, or would like to apply this to multiple repositor
 ## Running the automation
 The files in `amplience-automation/automation-files` are content types and content type schemas that allow you to configure a Stylitics widget using Amplience content items. The folder also includes example content items that demonstrate how they can be used.
 
-Firstly install the project dependencies ensuring that you are node version `18.x` first and then running `npm i`
+Firstly install the project dependencies ensuring that you are node version `18.x` first and then running `npm i`.
 
 The easiest way to import these is through a script included with the project. Use `npm run import` to obtain a list of arguments, and provide them like `npm run import -- --clientId a --clientSecret b --hubId c --contentRepoId d` to import to a specific hub.
 
